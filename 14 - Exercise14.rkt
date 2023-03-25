@@ -1,0 +1,5 @@
+(define (string-last x) (if (string? x) 
+                              (if(> (string-length x) 0) 
+                                      (string-ith x (- (string-length x) 1)) 
+                                      "Error: It is an empty string.") 
+                              "Error: It is not a string."))
