@@ -1,1 +1,1 @@
-(define (==> sunny friday)  (or (not #false) #true))
+(define (==> sunny friday)  (or (not sunny) friday))
