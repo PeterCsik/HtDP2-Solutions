@@ -28,6 +28,7 @@
               (letter (read-file in-fst)
                       (read-file in-lst)
                       (read-file in-signature))))
+                      
 ; Interactions area
 (write-file "in-fst" "Adam")
 (write-file "in-lst" "Noel")
