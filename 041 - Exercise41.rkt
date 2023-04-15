@@ -49,18 +49,44 @@
 
 (define Y-CAR (+(- (image-height BACKGROUND) (image-height CAR)) (/ (image-height CAR) 2)))
 
-(define (tock ws)
-  (+ ws 3))
-(check-expect (tock 20) 23)
-(check-expect (tock 100) 103)
+; WorldState: data that represents the state of the world (ws)
+; A WorldState is a Number
+; interpretation the number of pixels between the left border of the sceen and the car
+
+
+; WorldState -> Image
+; place the image of the car x pixels from the left margin of the BACKGROUND image
+; (define (render ws) BACKGROUND)
 
 (define (render ws)
   (place-image CAR ws Y-CAR BACKGROUND))
+
 (check-expect (render 50) (place-image CAR 50 Y-CAR BACKGROUND))
 (check-expect (render 90) (place-image CAR 90 Y-CAR BACKGROUND))
 
+
+; WorldState -> WorldState
+; adds 3 to x to move the car right
+; (define (tock ws) (... ws ...))
+
+(define (tock ws)
+  (+ ws 3))
+
+(check-expect (tock 20) 23)
+(check-expect (tock 100) 103)
+
+
+; WorldState -> Boolean
+; after each event, big-bang evaluates (end? ws)
+; (define (end? ws) (... ws ...))
+
 (define (end? ws)
   (> ws(+ (image-width BACKGROUND) (image-width CAR))))
+
+
+; WorldState -> WorldState
+; launches the program from some initial state
+; (define (main ws) (... ws ...))
 
 (define (main ws)
   (big-bang ws
