@@ -1,6 +1,5 @@
 (define WHEEL-RADIUS 15)
 
-
 (define WIDTH-OF-WORLD (* 40 WHEEL-RADIUS))
 
 (define HEIGHT-OF-WORLD (* 5 WHEEL-RADIUS))
@@ -53,7 +52,6 @@
 ; A WorldState is a Number
 ; interpretation the number of pixels between the left border of the sceen and the car
 
-
 ; WorldState -> Image
 ; place the image of the car x pixels from the left margin of the BACKGROUND image
 ; (define (render ws) BACKGROUND)
@@ -63,7 +61,6 @@
 
 (check-expect (render 50) (place-image CAR 50 Y-CAR BACKGROUND))
 (check-expect (render 90) (place-image CAR 90 Y-CAR BACKGROUND))
-
 
 ; WorldState -> WorldState
 ; adds 3 to x to move the car right
@@ -75,14 +72,12 @@
 (check-expect (tock 20) 23)
 (check-expect (tock 100) 103)
 
-
 ; WorldState -> Boolean
 ; after each event, big-bang evaluates (end? ws)
 ; (define (end? ws) (... ws ...))
 
 (define (end? ws)
   (> ws(+ (image-width BACKGROUND) (image-width CAR))))
-
 
 ; WorldState -> WorldState
 ; launches the program from some initial state
