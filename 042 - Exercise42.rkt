@@ -1,6 +1,5 @@
 (define WHEEL-RADIUS 5)
 
-
 (define WIDTH-OF-WORLD (* 40 WHEEL-RADIUS))
 
 (define HEIGHT-OF-WORLD (* 5 WHEEL-RADIUS))
@@ -49,47 +48,47 @@
 
 (define Y-CAR (+(- (image-height BACKGROUND) (image-height CAR)) (/ (image-height CAR) 2)))
 
-; WorldState: data that represents the state of the world (ws)
-; A WorldState is a Number
-; interpretation the state denotes the x-coordinate of the right-most edge of the car.
+(define VELOCITY 3)
 
+(define (car-distance as)
+  (* as VELOCITY))
 
-; WorldState -> Image
-; place the image of the car x pixels from the left margin of the BACKGROUND image
-; (define (render ws) BACKGROUND)
+; AnimationState: (as)
+; the number of clock ticks since the animation started
 
-(define (render ws)
-  (place-image CAR (- ws (/ (image-width CAR) 2))Y-CAR BACKGROUND))
+; AnimationState -> Image
+; place the image of the car x pixels from the left margin of the BACKGROUND image based on the AnimationState
+; (define (render as) BACKGROUND)
 
-(check-expect (render 50) (place-image CAR 30 Y-CAR BACKGROUND))
-(check-expect (render 90) (place-image CAR 70 Y-CAR BACKGROUND))
+(define (render as)
+  (place-image CAR (- (car-distance as)(/ (image-width CAR) 2)) (+ Y-CAR  (* (sin as) 5)) BACKGROUND))
 
+(check-expect (render 0) (place-image CAR -60 (+ Y-CAR (* (sin 0) 5)) BACKGROUND))
+(check-expect (render 30) (place-image CAR 30 (+ Y-CAR (* (sin 30) 5)) BACKGROUND))
 
-; WorldState -> WorldState
-; adds 3 to x to move the car right
-; (define (tock ws) (... ws ...))
+; AnimationState -> AnimationState
+; adds 1 to the number of clock ticks since the animation started
+; (define (tock as) (... as ...))
 
-(define (tock ws)
-  (+ ws 3))
+(define (tock as)
+  (add1 as))
 
-(check-expect (tock 20) 23)
-(check-expect (tock 100) 103)
+(check-expect (tock 20) 21)
+(check-expect (tock 100) 101)
 
+; AnimationSate -> Boolean
+; after each event, big-bang evaluates (end? as)
+; (define (end? as) (... as ...))
 
-; WorldState -> Boolean
-; after each event, big-bang evaluates (end? ws)
-; (define (end? ws) (... ws ...))
+(define (end? as)
+  (> (car-distance as)(+ (image-width BACKGROUND) (image-width CAR))))
 
-(define (end? ws)
-  (> ws(+ (image-width BACKGROUND) (image-width CAR))))
-
-
-; WorldState -> WorldState
+; AnimationState -> AnimationState
 ; launches the program from some initial state
-; (define (main ws) (... ws ...))
+; (define (main as) (... as ...))
 
-(define (main ws)
-  (big-bang ws
+(define (main as)
+  (big-bang as
     [to-draw render]
     [on-tick tock]
     [stop-when end?]))
