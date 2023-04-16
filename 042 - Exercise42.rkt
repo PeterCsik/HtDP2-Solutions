@@ -63,8 +63,8 @@
 (define (render as)
   (place-image CAR (- (car-distance as)(/ (image-width CAR) 2)) (+ Y-CAR  (* (sin as) 5)) BACKGROUND))
 
-(check-expect (render 0) (place-image CAR -60 (+ Y-CAR (* (sin 0) 5)) BACKGROUND))
-(check-expect (render 30) (place-image CAR 30 (+ Y-CAR (* (sin 30) 5)) BACKGROUND))
+(check-expect (render 30) (place-image CAR 70 (+ Y-CAR (* (sin 30) 5)) BACKGROUND))
+(check-expect (render 50) (place-image CAR 130 (+ Y-CAR (* (sin 50) 5)) BACKGROUND))
 
 ; AnimationState -> AnimationState
 ; adds 1 to the number of clock ticks since the animation started
