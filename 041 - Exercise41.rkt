@@ -57,10 +57,10 @@
 ; (define (render ws) BACKGROUND)
 
 (define (render ws)
-  (place-image CAR ws Y-CAR BACKGROUND))
+  (place-image CAR (+ ws (/ (image-width CAR) 2)) Y-CAR BACKGROUND))
 
-(check-expect (render 50) (place-image CAR 50 Y-CAR BACKGROUND))
-(check-expect (render 90) (place-image CAR 90 Y-CAR BACKGROUND))
+(check-expect (render 0) (place-image CAR 60 Y-CAR BACKGROUND))
+(check-expect (render 90) (place-image CAR 150 Y-CAR BACKGROUND))
 
 ; WorldState -> WorldState
 ; adds 3 to x to move the car right
