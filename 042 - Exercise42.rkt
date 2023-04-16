@@ -76,7 +76,7 @@
 (check-expect (tock 20) 21)
 (check-expect (tock 100) 101)
 
-; AnimationSate -> Boolean
+; AnimationState -> Boolean
 ; after each event, big-bang evaluates (end? as)
 ; (define (end? as) (... as ...))
 
