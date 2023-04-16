@@ -50,7 +50,7 @@
 
 ; WorldState: data that represents the state of the world (ws)
 ; A WorldState is a Number
-; interpretation the number of pixels between the left border of the sceen and the car
+; interpretation the number of pixels between the left border of the screen and the car
 
 ; WorldState -> Image
 ; place the image of the car x pixels from the left margin of the BACKGROUND image
