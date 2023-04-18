@@ -91,6 +91,8 @@
 (define (mouse-click as x y me)
   (cond [(equal? me "button-down") x]
         [else as]))
+(check-expect (mouse-click 40 10 20 "button-down") 10)
+(check-expect (mouse-click 100 10 20 "something else") 100)
 
 ; AnimationState -> AnimationState
 ; launches the program from some initial state
