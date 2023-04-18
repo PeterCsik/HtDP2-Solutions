@@ -92,8 +92,8 @@
   (cond [(string=? "button-down" me) x]
         [else as]))
 
-;(check-expect (mouse-click 40 10 20 "button-down") 10)
-;(check-expect (mouse-click 20 10 20 "something else") 10)
+(check-expect (mouse-click 40 10 20 "button-down") 10)
+(check-expect (mouse-click 20 10 20 "something else") 20)
 
 ; AnimationState -> AnimationState
 ; launches the program from some initial state
