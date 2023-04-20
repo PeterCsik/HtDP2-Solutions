@@ -1,17 +1,13 @@
-; we use string data type to represent strings (textual information)
+;; String -> String
+;; Produces the give string with the first character removed.
 
-; String -> String
-; removes the first character from a string
-; define (f str) "bcd")
+(check-expect (string-rest "abc") "bc")
+(check-expect (string-rest "hello") "ello")
 
-; given: "Mozart", expected: "ozart"
-; given: "city", expected: "ity"
-; given: "a", expected ""
+;(define (string-rest str) "a")        ;this is the stub
 
-; (define (string-rest str) (... str ...))
+;(define (string-rest str)             ;this the template
+;  (... str))
 
-(define (string-rest str)(substring str 1))
-
-(string-rest "Mozart")
-(string-rest "bridge")
-(string-rest "a")
+(define (string-rest str)
+  (substring str 1))
