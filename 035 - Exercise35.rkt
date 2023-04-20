@@ -1,16 +1,13 @@
-; We use strings to represent from non-empty strings
-; We use strings to represent single characters
+;; String -> String
+;; Extracts the last character from a non-empty string.
 
-; String -> String
-; extracts the last character from a non-empty string
-; (define (g str) "m")
+(check-expect (string-last "abc") "c")
+(check-expect (string-last "hello") "o")
 
-; given: "monitor", expected "r"
-; given: "old", expected: "d"
+;(define (string-last str) "a")       ;this is the stub
 
-; (define (string-last str) ( ... str ...))
+;(define (string-last str)             ;this is the template
+;  (... str))
 
-(define (string-last str)(string-ith str (-(string-length str)1)))
-
-(string-last "monitor")
-(string-last "old")
+(define (string-last str)
+  (string-ith str (-(string-length str)1)))
