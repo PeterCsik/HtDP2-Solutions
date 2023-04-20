@@ -6,7 +6,7 @@
 
 ;(define (string-last str) "a")       ;this is the stub
 
-;(define (string-last str)             ;this is the template
+;(define (string-last str)            ;this is the template
 ;  (... str))
 
 (define (string-last str)
