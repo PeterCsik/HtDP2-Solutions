@@ -1,4 +1,4 @@
-(define CAT1 <image>)
+(define CAT1 ...image1)
 (define CAT1-HEIGHT (image-height CAT1))
 (define CAT1-WIDTH (image-width CAT1))
 
