@@ -15,7 +15,7 @@
 (check-expect (red-bar 150) (rectangle 150 25 "solid" "red"))
 
 ; (define (red-bar ws)        ; this is the template
-;    (...img))
+;    (...ws))
 
 (define (red-bar ws) (rectangle ws BACKGROUND-HEIGHT "solid" "red"))
 
