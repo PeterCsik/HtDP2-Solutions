@@ -1,1 +1,2 @@
-(define (f x y) (sqrt (+ (sqr x) (sqr y))))
+(define (distance x y)
+  (sqrt (+ (sqr x) (sqr y))))
