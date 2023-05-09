@@ -1,5 +1,7 @@
-(define (boat x) (above (triangle x "solid" "green")
+(define BOAT-SIZE 50)
+
+(above (triangle (* BOAT-SIZE 3) "solid" "grey")
          (beside
-               (triangle/sas x 90 x "solid" "green")
-               (rectangle (* x 2) x "solid" "brown")
-               (triangle/asa 90 x 45 "solid" "green"))))
+               (triangle/sas BOAT-SIZE 90 BOAT-SIZE "solid" "brown")
+               (rectangle (* BOAT-SIZE 5) BOAT-SIZE "solid" "brown")
+               (triangle/asa 90 BOAT-SIZE 45 "solid" "brown")))
