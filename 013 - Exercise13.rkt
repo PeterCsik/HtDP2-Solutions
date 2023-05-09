@@ -1,5 +1,5 @@
 (define (string-first x)
-  (if (string? x)(if(> (string-length x) 0) 
+  (if (string? x) (if(> (string-length x) 0) 
                                       (string-ith x 0) 
                                       "Error: It is an empty string.") 
                               "Error: It is not a string."))
@@ -10,6 +10,6 @@
          (cond
            [(> (string-length x) 0) (string-ith x 0)]
            [(= (string-length x) 0) "Error: It is an empty string."])]
-       [ else "Error: It is not a string."]
+       [else "Error: It is not a string."]
     )
   )
