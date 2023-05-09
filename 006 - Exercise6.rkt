@@ -1,2 +1,2 @@
-(define cat _ )
+(define cat ... )
 (*(image-height cat) (image-width cat))
