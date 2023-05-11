@@ -1,5 +1,5 @@
 ; A non-empty string is represented by String (data type).
-; Interpretation: A non-empty string is a sequence of characters with at least one character.
+; Interpretation: a non-empty string is a sequence of characters with at least one character.
 
 ; (Non-empty) String -> String
 ; Extracts the first character from a non-empty string.
