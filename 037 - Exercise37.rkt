@@ -3,18 +3,18 @@
 
 ; (Non-empty) String -> String
 ; Produces a string with the first character removed.
-; (define (string-first str) "a")
+; (define (string-rest str) "a")
 
 ; given: "abc", expected: "bc"
 ; given: "hello world", expected: "ello world"
 ; given: "b", expected: ""
 
-; (define (string-first str)
+; (define (string-rest str)
 ;   (... str ...))
 
-(define (string-first str)
+(define (string-rest str)
   (substring str 1 (string-length str)))
 
-(check-expect (string-first "abc") "bc")
-(check-expect (string-first "hello world") "ello world")
-(check-expect (string-first "b") "")
+(check-expect (string-rest "abc") "bc")
+(check-expect (string-rest "hello world") "ello world")
+(check-expect (string-rest "b") "")
