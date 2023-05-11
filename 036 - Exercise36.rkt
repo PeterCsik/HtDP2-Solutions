@@ -1,17 +1,18 @@
-; image is represented by image data type
-; count of pixels is represented by number data type
+; An image area is a (positive non-zero) Number.
+; Interpretation: it represents the count of pixels in a given image.
 
 ; Image -> Number
-; counts the number of pixels in a given image
-; (define (f img) 0)
+; Counts the number of pixels in a given image.
+; (define (image-area img) 0)
 
-; given: image with size 10x10 pixels, expected: 100
-; given: image with size 2x5 pixels, expected: 10
-; givne: (rectangle 50 30 "solid" "pink")
+; given: an image with heigth of 100 pixels and width of 20 pixels, expected: 2000
+; given: an image with heigth of 100 pixels and width of 100 pixels, expected: 10000
 
-; (define (image-area img) (... img ...))
+; (define (image-area img)
+;   (... img ...))
 
-(define (image-area img) (* (image-width img) (image-height img)))
+(define (image-area img)
+  (* (image-height img)(image-width img)))
 
-(image-area _ ) ; replace "_" with an image
-(image-area (rectangle 50 30 "solid" "pink"))
+(check-expect (image-area (rectangle 100 20 "solid" "blue")) 2000)
+(check-expect (image-area (rectangle 100 100 "solid" "blue")) 10000)
