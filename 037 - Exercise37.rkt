@@ -2,7 +2,7 @@
 ; Interpretation: a non-empty string is a sequence of characters with at least one character.
 
 ; (Non-empty) String -> String
-; Produces a string with the first character removed.
+; Produces a string like the given one with the first character removed.
 ; (define (string-rest str) "a")
 
 ; given: "abc", expected: "bc"
