@@ -9,8 +9,8 @@
 ; given: "hello world", expected: "h"
 ; given: "b", expected: "b"
 
-;(define (string-first str)
-;  (... str ...))
+; (define (string-first str)
+;   (... str ...))
 
 (define (string-first str)
   (substring str 0 1))
