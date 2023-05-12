@@ -1,27 +1,20 @@
-(define WHEEL-RADIUS 3)
+(define WHEEL-RADIUS 5)    ; the single point of control
 
-(define WHEEL
-  (circle WHEEL-RADIUS "solid" "black"))
+(define CAR-BODY
+  (above/align "center"
+               (rectangle (* WHEEL-RADIUS 3.5) (* WHEEL-RADIUS 1.0) "solid" "red")       ; upper part of the car (windows area)
+               (rectangle (* WHEEL-RADIUS 7) (* WHEEL-RADIUS 1.8) "solid" "red")))       ; bottom part of the car (doors area)
 
-(define SPACE
-  (rectangle (* WHEEL-RADIUS 3) 0 "outline" "white"))
+(define WHEELS
+  (overlay/offset
+   (circle WHEEL-RADIUS "solid" "black")    ; the first wheel
+   (* WHEEL-RADIUS 3.5) 0                   ; the distance between the wheels
+   (circle WHEEL-RADIUS "solid" "black")    ; the second wheel
+   ))
 
-(define BOTH-WHEELS
-  (beside WHEEL SPACE WHEEL))
-
-(define CAR-ROOF
-  (rectangle (* 4 WHEEL-RADIUS) (* 1 WHEEL-RADIUS) "solid" "red"))
-
-(define CAR-PART
-  (rectangle (* 4 WHEEL-RADIUS) (* 2 WHEEL-RADIUS) "solid" "red"))
-
-(define CAR-PART-WITH-WHEEL
-  (underlay/xy
-   CAR-PART
-   WHEEL-RADIUS WHEEL-RADIUS
-   WHEEL))
-
-(define CAR
-  (above
-   CAR-ROOF
-   (beside CAR-PART-WITH-WHEEL CAR-PART-WITH-WHEEL)))
+(define CAR                     ; car body with both wheels
+  (underlay/align/offset
+   "center" "bottom"
+   CAR-BODY
+   0 WHEEL-RADIUS
+   WHEELS))
