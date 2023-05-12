@@ -12,7 +12,7 @@
    (circle WHEEL-RADIUS "solid" "black")    ; the second wheel
    ))
 
-(define CAR                     ; car body with both wheels
+(define CAR                     ; car body with both wheels combined
   (underlay/align/offset
    "center" "bottom"
    CAR-BODY
