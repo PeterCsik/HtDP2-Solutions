@@ -13,7 +13,7 @@
 ;   (... cw ...))
 
 (define (tock cw)
-  (+ ws 3))
+  (+ cw 3))
 
 (check-expect (tock 20) 23)           ; actual value 23 agrees with 23, the expected value
 (check-expect (tock 100) 103)         ; actual value 103 agrees with 103, the expected value
