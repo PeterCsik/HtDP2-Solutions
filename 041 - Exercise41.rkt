@@ -88,7 +88,7 @@
 
 ; A function for the "stop-when" handler:
 ; WorldState -> Boolean
-; Stops the program when the car dissapears in the scene.
+; Stops the program when the car dissapears on the right side of the scene.
 ; (define (end? cw) #true)
 
 ; given: the car position 40 and the scene width 300 , expected #false
