@@ -51,7 +51,7 @@
 ; A WorldState is a Number. (cw)
 ; Interpretation: the number of pixels between the left border of the scene and the car.
 
-; A function for "to-draw" handler:
+; A function for the "to-draw" handler:
 ; WorldState -> Image
 ; Places the car into the SCENE according to the given world state.
 ; (define (render cw)
@@ -69,7 +69,7 @@
 (check-expect (render 0) (place-image CAR 0 Y-CAR SCENE))
 (check-expect (render 50) (place-image CAR 50 Y-CAR SCENE))
 
-; A function for "on-tick" handler:
+; A function for the "on-tick" handler:
 ; WorldState -> WorldState
 ; Moves the car by 3 pixels for every clock tick.
 ; (define (tock cw) 0)
@@ -88,7 +88,7 @@
 (check-expect (tock 100) 103)         ; actual value 103 agrees with 103, the expected value
 ;(check-expect (tock 200) 210)        ; a check failure: actual value 203 differs from 210, the expected value
 
-; A function for "stop-when" handler:
+; A function for the "stop-when" handler:
 ; WorldState -> Boolean
 ; Stops the program when x-coordinate of the car position is greater than the width of the scene.
 ; (define (end? cw) #true)
