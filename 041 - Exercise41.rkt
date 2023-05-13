@@ -76,7 +76,6 @@
 
 ; given: 20, expected 23
 ; given: 100, expected 103
-; given: 200, expected 203
 
 ; (define (tock cw)
 ;   (... cw ...))
@@ -89,7 +88,7 @@
 
 ; A function for the "stop-when" handler:
 ; WorldState -> Boolean
-; Stops the program when x-coordinate of the car position is greater than the width of the scene.
+; Stops the program when the car dissapears in the scene.
 ; (define (end? cw) #true)
 
 ; given: the car position 40 and the scene width 300 , expected #false
