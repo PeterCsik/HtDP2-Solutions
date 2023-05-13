@@ -1,6 +1,5 @@
 ; A WorldState is a Number.
-; Interpretation: the number of pixels between
-; the left border of the scene and the car.
+; Interpretation: the number of pixels between the left border of the scene and the car.
 
 ; WorldState -> WorldState 
 ; Moves the car by 3 pixels for every clock tick.
