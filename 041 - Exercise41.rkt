@@ -1,6 +1,5 @@
 ; ---------- Constant definitions ----------
 
-
 (define WHEEL-RADIUS 5)    ; the single point of control
 
 (define CAR-BODY
@@ -42,9 +41,7 @@
    BACKGROUND
    ))
 
-
 ; ---------- Function definitions ----------
-
 
 ; A WorldState is a Number. (cw)
 ; Interpretation: the number of pixels between the left border of the scene and the car.
@@ -108,9 +105,7 @@
 (check-expect (end? 40) #false)
 (check-expect (end? 301) #true)
 
-
 ; ---------- Application ----------
-
 
 (define (main ws)
   (big-bang ws
