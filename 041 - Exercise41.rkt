@@ -84,9 +84,8 @@
 (define (tock cw)
   (+ cw 3))
 
-(check-expect (tock 20) 23)           ; actual value 23 agrees with 23, the expected value
-(check-expect (tock 100) 103)         ; actual value 103 agrees with 103, the expected value
-;(check-expect (tock 200) 210)        ; a check failure: actual value 203 differs from 210, the expected value
+(check-expect (tock 20) 23)
+(check-expect (tock 100) 103)
 
 ; A function for the "stop-when" handler:
 ; WorldState -> Boolean
