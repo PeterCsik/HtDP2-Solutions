@@ -44,7 +44,7 @@
 ; ---------- Function definitions ----------
 
 ; Wish-list:
-; The big-bang function will be used to for world program. 
+; The big-bang function will be used to for running our world program. 
 ; It requires to build functions for "to-draw", "on-tick" and "stop-when" handlers.
 
 ; data definition:
