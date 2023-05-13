@@ -99,8 +99,8 @@
 
 ; ---------- Application ----------
 
-(define (main ws)
-  (big-bang ws
+(define (main cw)
+  (big-bang cw
     [to-draw render]
     [on-tick tock]
     [stop-when end?]
