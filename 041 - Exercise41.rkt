@@ -43,12 +43,13 @@
 
 ; ---------- Function definitions ----------
 
-; A WorldState is a Number. (cw)
-; Interpretation: the number of pixels between the left border of the scene and the car.
-
 ; Wish-list:
 ; The big-bang function will be used to for world program. 
 ; It requires to build functions for "to-draw", "on-tick" and "stop-when" handlers.
+
+; data definition:
+; A WorldState is a Number. (cw)
+; Interpretation: the number of pixels between the left border of the scene and the car.
 
 ; A function for "to-draw" handler:
 ; WorldState -> Image
