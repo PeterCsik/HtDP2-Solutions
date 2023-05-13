@@ -1,94 +1,113 @@
-(define WHEEL-RADIUS 5)
+; ---------- Constant definitions ----------
 
-(define WIDTH-OF-WORLD (* 40 WHEEL-RADIUS))
 
-(define HEIGHT-OF-WORLD (* 5 WHEEL-RADIUS))
+(define WHEEL-RADIUS 5)    ; the single point of control
 
-(define CROWN-OF-TREE  (circle (* 1.5 WHEEL-RADIUS) "solid" "green"))
+(define CAR-BODY
+  (above/align "center"
+               (rectangle (* WHEEL-RADIUS 3.5) (* WHEEL-RADIUS 1.0) "solid" "red")       ; upper part of the car (windows area)
+               (rectangle (* WHEEL-RADIUS 7) (* WHEEL-RADIUS 1.8) "solid" "red")))       ; bottom part of the car (doors area)
 
-(define TRUNK-OF-TREE  (rectangle (* 0.25 WHEEL-RADIUS) (* 2.5 WHEEL-RADIUS) "solid" "brown"))
+(define WHEELS
+  (overlay/offset
+   (circle WHEEL-RADIUS "solid" "black")    ; the first wheel
+   (* WHEEL-RADIUS 3.5) 0                   ; the distance between the wheels
+   (circle WHEEL-RADIUS "solid" "black")    ; the second wheel
+   ))
 
-(define TREE (underlay/align/offset "middle" "top"
-              CROWN-OF-TREE
-              0 (* 2 WHEEL-RADIUS)
-              TRUNK-OF-TREE))
+(define CAR                     ; car body with both wheels combined
+  (underlay/align/offset
+   "center" "bottom"
+   CAR-BODY
+   0 WHEEL-RADIUS
+   WHEELS))
 
-(define BACKGROUND (overlay/offset
-                    TREE
-                   (* 8 WHEEL-RADIUS) 0
-                   (empty-scene WIDTH-OF-WORLD HEIGHT-OF-WORLD)))
+(define Y-CAR
+  (* WHEEL-RADIUS 5))
 
-(define WHEEL
-  (circle WHEEL-RADIUS "solid" "black"))
+(define BACKGROUND
+  (empty-scene (* 60 WHEEL-RADIUS) (* 7 WHEEL-RADIUS)))
 
-(define SPACE
-  (rectangle (* WHEEL-RADIUS 3) 0 "outline" "white"))
+(define TREE
+  (underlay/align/offset
+   "center" "bottom"
+   (circle (* WHEEL-RADIUS 2) "solid" "green")                        ; crown
+   0 (* WHEEL-RADIUS 2)                                               
+   (rectangle WHEEL-RADIUS (* WHEEL-RADIUS 3) "solid" "brown")))      ; trunk
 
-(define BOTH-WHEELS
-  (beside WHEEL SPACE WHEEL))
+(define SCENE
+  (overlay/align
+   "middle" "bottom"                                         ; the tree is positioned in the center of the background
+   TREE
+   BACKGROUND
+   ))
 
-(define CAR-ROOF
-  (rectangle (* 4 WHEEL-RADIUS) (* 1 WHEEL-RADIUS) "solid" "red"))
+; ---------- Function definitions ----------
 
-(define CAR-PART
-  (rectangle (* 4 WHEEL-RADIUS) (* 2 WHEEL-RADIUS) "solid" "red"))
 
-(define CAR-PART-WITH-WHEEL
-  (underlay/xy
-   CAR-PART
-    WHEEL-RADIUS WHEEL-RADIUS
-   WHEEL))
+; A WorldState is a Number. (cw)
+; Interpretation: the number of pixels between the left border of the scene the x-coordinate of the right-most edge of the car.
 
-(define CAR
-  (above
-   CAR-ROOF
-   (beside
-    CAR-PART-WITH-WHEEL
-    CAR-PART-WITH-WHEEL)))
 
-(define Y-CAR (+(- (image-height BACKGROUND) (image-height CAR)) (/ (image-height CAR) 2)))
+; WorldState -> Image
+; Places the car into the SCENE according to the given world state.
+; (define (render cw)
+;    SCENE))
 
-(define VELOCITY 3)
+; given: 0, expected (place-image CAR 0 Y-CAR SCENE)
+; given: 50, expected (place-image CAR 50 Y-CAR SCENE)
 
-(define (car-distance as)
-  (* as VELOCITY))
+; (define (render cw)
+;    (... cw ...))
 
-; AnimationState: (as)
-; the number of clock ticks since the animation started
+(define (render cw)
+  (place-image CAR (- cw (/ (image-width CAR) 2)) Y-CAR SCENE))                   ; <<< before:(place-image CAR cw Y-CAR SCENE))
 
-; AnimationState -> Image
-; place the image of the car x pixels from the left margin of the BACKGROUND image based on the AnimationState
-; (define (render as) BACKGROUND)
+(check-expect (render 0) (place-image CAR (- 0 (/ (image-width CAR) 2)) Y-CAR SCENE))
+(check-expect (render 50) (place-image CAR (- 50 (/ (image-width CAR) 2)) Y-CAR SCENE))
 
-(define (render as)
-  (place-image CAR (- (car-distance as)(/ (image-width CAR) 2)) (+ Y-CAR  (* (sin as) 5)) BACKGROUND))
 
-(check-expect (render 30) (place-image CAR 70 (+ Y-CAR (* (sin 30) 5)) BACKGROUND))
-(check-expect (render 50) (place-image CAR 130 (+ Y-CAR (* (sin 50) 5)) BACKGROUND))
+; WorldState -> WorldState
+; Moves the car by 3 pixels for every clock tick.
+; (define (tock cw) 0)
 
-; AnimationState -> AnimationState
-; adds 1 to the number of clock ticks since the animation started
-; (define (tock as) (... as ...))
+; given: 20, expected 23
+; given: 100, expected 103
+; given: 200, expected 203
 
-(define (tock as)
-  (add1 as))
+; (define (tock cw)
+;   (... cw ...))
 
-(check-expect (tock 20) 21)
-(check-expect (tock 100) 101)
+(define (tock cw)
+  (+ cw 3))
 
-; AnimationState -> Boolean
-; after each event, big-bang evaluates (end? as)
-; (define (end? as) (... as ...))
+(check-expect (tock 20) 23)           ; actual value 23 agrees with 23, the expected value
+(check-expect (tock 100) 103)         ; actual value 103 agrees with 103, the expected value
+;(check-expect (tock 200) 210)        ; a check failure: actual value 203 differs from 210, the expected value
 
-(define (end? as)
-  (> (car-distance as)(+ (image-width BACKGROUND) (image-width CAR))))
+; WorldState -> Boolean
+; Stops the program when x-coordinate of the car position is greater than the width of the scene.
+; (define (end? cw) #true)
 
-; AnimationState -> AnimationState
-; launches the program from some initial state
-; (define (main as) (... as ...))
+; given: the car position 40 and the scene width 300 , expected #false
+; given: the car position 400 and the scene width 300, expected #true
 
-(define (main as)
-  (big-bang as
+; (define (end? cw)
+;   (... cw ...))
+
+(define (end? cw)
+  (> (- cw (image-width CAR)) (image-width SCENE)))       ; <<< before: (> (- cw (/(image-width CAR) 2)) (image-width SCENE)))
+
+(check-expect (end? 40) #false)
+(check-expect (end? 400) #true)
+
+
+; ---------- Application ----------
+
+
+(define (main ws)
+  (big-bang ws
     [to-draw render]
     [on-tick tock]
-    [stop-when end?]))
+    [stop-when end?]
+  ))
