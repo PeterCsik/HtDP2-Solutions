@@ -3,7 +3,8 @@
 ; (define (tock cw) 0)
 
 ; given: 20, expected 23
-; given: 78, expected 81
+; given: 100, expected 103
+; given: 200, expected 203
 
 (define (tock ws)
   (+ ws 3))
