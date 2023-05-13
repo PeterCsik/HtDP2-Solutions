@@ -49,7 +49,7 @@
 
 ; data definition:
 ; A WorldState is a Number. (cw)
-; Interpretation: the number of pixels between the left border of the scene and the car.
+; Interpretation: the number of pixels between the left border of the scene and the middle of the car.
 
 ; A function for the "to-draw" handler:
 ; WorldState -> Image
@@ -95,16 +95,15 @@
 
 ; given: the car position 40 and the scene width 300 , expected #false
 ; given: the car position 301 and the scene width 300, expected #true
-; given: 200, expected 203
 
 ; (define (end? cw)
 ;   (... cw ...))
 
 (define (end? cw)
-  (> cw (image-width SCENE)))
+  (> (- cw (/(image-width CAR) 2)) (image-width SCENE)))
 
 (check-expect (end? 40) #false)
-(check-expect (end? 301) #true)
+(check-expect (end? 400) #true)
 
 ; ---------- Application ----------
 
