@@ -3,7 +3,7 @@
 ; the left border of the scene and the car.
 
 ; WorldState -> WorldState 
-; moves the car by 3 pixels for every clock tick
+; Moves the car by 3 pixels for every clock tick.
 ; (define (tock cw) 0)
 
 ; given: 20, expected 23
