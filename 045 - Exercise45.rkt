@@ -1,6 +1,6 @@
 ; ---------- Constant definitions ----------
 
-(define CAT1 ...)
+(define CAT1 ...)       ; replace "..." with an actual image
 
 (define BACKGROUND
   (empty-scene (*(image-width CAT1) 10) (*(image-height CAT1) 1.1)))
