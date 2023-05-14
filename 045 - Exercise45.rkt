@@ -22,9 +22,9 @@
 ; (define (render cw)
 ;   (... modulo cw ...))
 
-; given: 10, expected 48
-; given: 0, expected 38
-; given: 800, expected 88
+; given: 10, expected: 48
+; given: 0, expected: 38
+; given: 800, expected: 88
 
 (define (render cw)
   (place-image CAT1 (modulo(+ cw X-CAT1)(image-width BACKGROUND)) Y-CAT1 BACKGROUND))
