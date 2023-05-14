@@ -64,10 +64,10 @@
 ;    (... as ...))
 
 (define (render as)
-  (place-image CAR (- (car-distance as) (/ (image-width CAR) 2)) Y-CAR SCENE))                   
+  (place-image CAR (- (car-distance as) (/ (image-width CAR) 2)) (* Y-CAR (sin (/ as 6))) SCENE))                   
 
-(check-expect (render 0) (place-image CAR (- (car-distance 0) (/ (image-width CAR) 2)) Y-CAR SCENE))
-(check-expect (render 50) (place-image CAR (- (car-distance 50) (/ (image-width CAR) 2)) Y-CAR SCENE))
+(check-expect (render 0) (place-image CAR (- (car-distance 0) (/ (image-width CAR) 2)) (* Y-CAR (sin (/ 0 6))) SCENE))
+(check-expect (render 50) (place-image CAR (- (car-distance 50) (/ (image-width CAR) 2)) (* Y-CAR (sin (/ 50 6))) SCENE))
 
 
 ; AnimationState -> AnimationState
