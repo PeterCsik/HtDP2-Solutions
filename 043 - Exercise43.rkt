@@ -86,7 +86,7 @@
 (check-expect (tock 0) 1) 
 (check-expect (tock 100) 101)         
 
-; WorldState -> Boolean
+; AnimationState-> Boolean
 ; Stops the program when the car dissapears on the right side of the scene.
 ; (define (end? as) #true)
 
