@@ -24,7 +24,6 @@
 ; (define (render cw)
 ;   (... modulo cw ...))
 
-
 ; given: 11, expected CAT2 and 49
 ; given: 1, expected CAT2 and 39
 ; given: 801, expected CAT 2 and 89
