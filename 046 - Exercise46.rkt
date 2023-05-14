@@ -1,7 +1,8 @@
 ; ---------- Constant definitions ----------
 
-(define CAT1 .)
-(define CAT2 .)
+(define CAT1 ...)               ; replace "..." with an actual image
+(define CAT2 ...)               ; replace "..." with the same image as used for CAT1, but change its color
+                                ; CAT1 and CAT2 have to have the same width and height
 
 (define BACKGROUND
   (empty-scene (*(image-width CAT1) 10) (*(image-height CAT1) 1.1)))
