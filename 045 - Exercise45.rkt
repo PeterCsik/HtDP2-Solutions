@@ -6,7 +6,7 @@
   (empty-scene (*(image-width CAT1) 10) (*(image-height CAT1) 1.1)))
 
 (define X-CAT1                          ; the left-most edge of the CAT1
-  (round(/ (image-width CAT1)2)))
+  (round(/ (image-width CAT1)2)))       ; round is needed because the modulo function used in our cat-prog accepts only integers and not decimal numbers
 
 (define Y-CAT1                          ; the y-coordinate of the CAT1 in the BACKGROUND
   (/ (image-height CAT1)1.8))
