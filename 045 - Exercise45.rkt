@@ -1,4 +1,5 @@
 ; ---------- Constant definitions ----------
+
 (define CAT1 .)
 
 (define BACKGROUND
