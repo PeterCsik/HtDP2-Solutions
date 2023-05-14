@@ -5,10 +5,10 @@
 (define BACKGROUND
   (empty-scene (*(image-width CAT1) 10) (*(image-height CAT1) 1.1)))
 
-(define X-CAT1
+(define X-CAT1                          ; the left-most edge of the CAT1
   (round(/ (image-width CAT1)2)))
 
-(define Y-CAT1
+(define Y-CAT1                          ; the y-coordinate of the CAT1 in the BACKGROUND
   (/ (image-height CAT1)1.8))
 
 ; ---------- Function definitions ----------
