@@ -11,14 +11,14 @@
 ; Interpretation: the three strings represent the three possible states that a traffic light may assume.
 
 ; TrafficLight -> Image
-; Renders and image of the TrafficeLight based on the the current state
-; (definition (traffic-circle cs) img)
+; Renders an image of the TrafficLight based on the the current state.
+; (define (traffic-circle cs) img)
 
 ; given: red, expected: (circle CIRCLE-RADIUS "solid" "red")
 ; given: green, expected: (circle CIRCLE-RADIUS "solid" "green")
 ; given: yellow, expected: (circle CIRCLE-RADIUS "solid" "yellow")
 
-; (definition (traffic-circle cs)                
+; (define (traffic-circle cs)                
 ;     (...cs)
 
 (define (traffic-circle cs) (circle CIRCLE-RADIUS "solid" cs))
