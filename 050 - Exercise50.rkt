@@ -1,4 +1,4 @@
-; ---------- Function definitions ----------
+; ---------- Function definition ----------
 
 ; A TrafficLight is one of the following Strings:
 ; – "red"
