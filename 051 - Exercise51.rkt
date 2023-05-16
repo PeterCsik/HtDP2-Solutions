@@ -1,46 +1,54 @@
+; ---------- Constant definitions ----------
+
 (define CIRCLE-RADIUS 35)
 
+; ---------- Function definitions ----------
 
-;; A TrafficLight is  one of the following Strings:
-;; -- "red"
-;; -- "green"
-;; -- "yellow"
-;; interpretation the three strings represent the three
-;; possible states that a traffic light may assume
+; A TrafficLight is one of the following Strings:
+; – "red"
+; – "green"
+; – "yellow"
+; Interpretation: the three strings represent the three possible states that a traffic light may assume.
 
+; TrafficLight -> Image
+; Renders and image of the TrafficeLight based on the the current state
+; (definition (traffic-circle cs) img)
 
-;; TrafficLight -> Image
-;; renders and image of the TrafficeLight based on the the current state
-;; (definition (traffic-circle cs) img)           ; this is the stub
+; given: red, expected: (circle CIRCLE-RADIUS "solid" "red")
+; given: green, expected: (circle CIRCLE-RADIUS "solid" "green")
+; given: yellow, expected: (circle CIRCLE-RADIUS "solid" "yellow")
 
-(check-expect (traffic-circle "red") (circle CIRCLE-RADIUS "solid" "red"))
-
-; (definition (traffic-circle cs)                ; this is the template
+; (definition (traffic-circle cs)                
 ;     (...cs)
 
 (define (traffic-circle cs) (circle CIRCLE-RADIUS "solid" cs))
 
+(check-expect (traffic-circle "red") (circle CIRCLE-RADIUS "solid" "red"))
+(check-expect (traffic-circle "green") (circle CIRCLE-RADIUS "solid" "green"))
+(check-expect (traffic-circle "yellow") (circle CIRCLE-RADIUS "solid" "yellow"))
 
-;; TrafficLight -> TrafficLight
-;; yields the next state give current states cs
-; (definition (traffic-light-next cs) "a")       ; this is the stub
+; TrafficLight -> TrafficLight
+; Yields the next state given current state s.
+; (define (traffic-light-next str) "a")
+
+; given: red, expected: green
+; given: green, expected: yellow
+; given: yellow, expected: red
+
+; (define (traffice-light-next s)
+;    ( ... s ...))
+
+(define (traffic-light-next s)
+  (cond
+    [(string=? "red" s) "green"]
+    [(string=? "green" s) "yellow"]
+    [(string=? "yellow" s) "red"]))
 
 (check-expect (traffic-light-next "red") "green")
 (check-expect (traffic-light-next "green") "yellow")
 (check-expect (traffic-light-next "yellow") "red")
 
-; (definition (traffic-light-next cs)            ; this is the template
-;      (...cs))
-
-(define (traffic-light-next cs)
-  (cond
-    [(string=? "red" cs) "green"]
-    [(string=? "green" cs) "yellow"]
-    [(string=? "yellow" cs) "red"]))
-
-
-;; TrafficLight -> TrafficLight
-;; changes the states of the traffic light
+; ---------- Application ----------
 
 (define (TheTrafficLight cs)
   (big-bang "yellow"
