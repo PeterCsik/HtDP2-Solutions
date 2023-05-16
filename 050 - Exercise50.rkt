@@ -14,7 +14,7 @@
 ; given: green, expected: yellow
 ; given: yellow, expected: red
 
-; (define (traffice-light-next s)
+; (define (traffic-light-next s)
 ;    ( ... s ...))
 
 (define (traffic-light-next s)
