@@ -1,10 +1,12 @@
-; ---------- Function definition ----------
+; ---------- Data definition ----------
 
 ; A TrafficLight is one of the following Strings:
 ; – "red"
 ; – "green"
 ; – "yellow"
 ; Interpretation: the three strings represent the three possible states that a traffic light may assume.
+
+; ---------- Function definition ----------
 
 ; TrafficLight -> TrafficLight
 ; Yields the next state given current state s.
