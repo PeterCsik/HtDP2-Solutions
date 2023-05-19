@@ -41,11 +41,12 @@
    BACKGROUND
    ))
 
-; ---------- Function definitions ----------
+; ---------- Data definitions ----------
 
 ; A WorldState is a Number. (cw)
 ; Interpretation: the number of pixels between the left border of the scene the x-coordinate of the right-most edge of the car.
 
+; ---------- Function definitions ----------
 
 ; WorldState -> Image
 ; Places the car into the SCENE according to the given world state.
