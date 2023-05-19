@@ -17,7 +17,7 @@
 ; Interpretation: "resting" represents a grounded rocket,
 ; a number denotes the height of a rocket in flight.
 
-; "resting" position
+; "resting" position example
 (place-image ROCKET (/ WIDTH 2) HEIGHT BACKG)      ; (/ WIDTH 2) is used to make the resting position of ROCKET in the bottom-center of the BACKG
 
 ; flying rocket examples
