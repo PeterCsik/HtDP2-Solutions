@@ -55,7 +55,6 @@
 ; (define render/status y)
 ;  (... y ...))
 
-
 (define (render/status y)
   (place-image
     (cond
