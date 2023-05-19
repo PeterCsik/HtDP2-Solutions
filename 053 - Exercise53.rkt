@@ -2,12 +2,8 @@
 
 (define HEIGHT 300) ; distances in pixels 
 (define WIDTH  100)
-(define YDELTA 3)
- 
 (define BACKG  (empty-scene WIDTH HEIGHT))
 (define ROCKET (rectangle 10 50 "solid" "red"))
- 
-(define CENTER (/ (image-height ROCKET) 2))
 
 ; ---------- Data definitions ----------
 
