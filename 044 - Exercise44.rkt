@@ -46,11 +46,12 @@
 (define (car-distance as)          ; added due to the change of the data definition from WorldState to AnimationState
   (* as VELOCITY))
 
-; ---------- Function definitions ----------
+; ---------- Data definitions ----------
 
 ; An AnimationState is a Number. (as)
 ; Interpretation: the number of clock ticks since the animation started.
 
+; ---------- Function definitions ----------
 
 ; AnimationState -> Image
 ; Places the car into the SCENE according to the given animation state.
