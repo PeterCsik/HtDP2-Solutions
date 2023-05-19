@@ -1,4 +1,4 @@
-; ---------- Data definition ----------
+; ---------- Data definitions ----------
 
 ; A TrafficLight is one of the following Strings:
 ; – "red"
