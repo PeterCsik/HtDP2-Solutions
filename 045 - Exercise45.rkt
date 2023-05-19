@@ -11,10 +11,12 @@
 (define Y-CAT1                          ; the y-coordinate of the CAT1 in the BACKGROUND
   (/ (image-height CAT1)1.8))
 
-; ---------- Function definitions ----------
+; ---------- Data definitions ----------
 
 ; A WorldState is a Number. (cw)
 ; Interpretation: the number of pixels between the left border of the scene and the left-most edge of the cat.
+
+; ---------- Function definitions ----------
 
 ; WorldState -> Image
 ; Places the cat into the BACKGROUND according to the given world state.
