@@ -41,15 +41,16 @@
    BACKGROUND
    ))
 
-; ---------- Function definitions ----------
+; ---------- Data definitions ----------
 
 ; Wish-list:
 ; The big-bang function will be used to for running our world program. 
 ; It requires to build functions for "to-draw", "on-tick" and "stop-when" handlers.
 
-; data definition:
 ; A WorldState is a Number. (cw)
 ; Interpretation: the number of pixels between the left border of the scene and the middle of the car.
+
+; ---------- Function definitions ----------
 
 ; A function for the "to-draw" handler:
 ; WorldState -> Image
