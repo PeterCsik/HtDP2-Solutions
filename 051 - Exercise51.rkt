@@ -1,4 +1,4 @@
-; ---------- Constant definition ----------
+; ---------- Constant definitions ----------
 
 (define CIRCLE-RADIUS 35)
 
