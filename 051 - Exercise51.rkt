@@ -2,13 +2,15 @@
 
 (define CIRCLE-RADIUS 35)
 
-; ---------- Function definitions ----------
+; ---------- Data definition ----------
 
 ; A TrafficLight is one of the following Strings:
 ; – "red"
 ; – "green"
 ; – "yellow"
 ; Interpretation: the three strings represent the three possible states that a traffic light may assume.
+
+; ---------- Function definitions ----------
 
 ; TrafficLight -> Image
 ; Renders an image of the TrafficLight based on the the current state.
