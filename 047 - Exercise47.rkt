@@ -4,10 +4,12 @@
 (define BACKGROUND-HEIGHT 25)
 (define BACKGROUND (rectangle BACKGROUND-WIDTH BACKGROUND-HEIGHT "outline" "black"))
 
-; ---------- Function definitions ----------
+; ---------- Data definition ----------
 
 ; WorldState is a Number. (cw)
 ; Interpretation: the number represents the current level of of happiness.
+
+; ---------- Function definitions ----------
 
 ; WorldState -> Image
 ; Produces a red bar with a width according to the WorldState.
