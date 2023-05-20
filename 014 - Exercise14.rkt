@@ -4,7 +4,7 @@
                                       "Error: It is an empty string.") 
                               "Error: It is not a string."))
 
-(define (string-last x)                         ;; an alternative solution using cond expressions
+(define (string-last x)                         ; an alternative solution using cond expressions
   (cond
     [(string? x)
          (cond
