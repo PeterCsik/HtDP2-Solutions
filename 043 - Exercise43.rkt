@@ -55,7 +55,7 @@
 
 ; AnimationState -> Image
 ; Places the car into the SCENE according to the given animation state.
-; (define (render as) SCENE))
+; (define (render as) img)
 
 ; given: 0, expected (place-image CAR 0 Y-CAR SCENE)
 ; given: 50, expected (place-image CAR 150 Y-CAR SCENE)
@@ -101,7 +101,7 @@
 (check-expect (end? 40) #false)
 (check-expect (end? 400) #true)
 
-; ---------- Application ----------
+; ---------- Application Function ----------
 
 (define (main as)
   (big-bang as
