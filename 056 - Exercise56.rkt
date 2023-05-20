@@ -127,7 +127,7 @@
 ; ---------- Application ----------
 
 (define (main x)
-  (big-bang x
+  (big-bang "resting"
     [on-key launch]
     [to-draw show]
     [on-tick fly]
