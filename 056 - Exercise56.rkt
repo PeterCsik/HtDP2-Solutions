@@ -17,7 +17,7 @@
 ; – a NonnegativeNumber 
 ; Interpretation: "resting" represents a grounded rocket,
 ; in countdown mode, a number denotes the number of pixels between the
-; top of the canvas and the rocket (its height)
+; top of the canvas and the rocket (its height).
 
 ; ---------- Function definitions ----------
 
