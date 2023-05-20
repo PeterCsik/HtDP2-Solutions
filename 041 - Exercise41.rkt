@@ -62,7 +62,7 @@
 ; given: 50, expected (place-image CAR 50 Y-CAR SCENE)
 
 ; (define (render cw)
-;    (... cw ...))
+;   (... cw ...))
 
 (define (render cw)
   (place-image CAR cw Y-CAR SCENE))
