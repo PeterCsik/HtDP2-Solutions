@@ -55,8 +55,7 @@
 
 ; AnimationState -> Image
 ; Places the car into the SCENE according to the given animation state.
-; (define (render as)
-;    SCENE))
+; (define (render as) SCENE))
 
 ; given: 0, expected (place-image CAR 0 Y-CAR SCENE)
 ; given: 50, expected (place-image CAR 150 Y-CAR SCENE)
@@ -69,7 +68,6 @@
 
 (check-expect (render 0) (place-image CAR (- (car-distance 0) (/ (image-width CAR) 2)) (* Y-CAR (sin (/ 0 6))) SCENE))
 (check-expect (render 50) (place-image CAR (- (car-distance 50) (/ (image-width CAR) 2)) (* Y-CAR (sin (/ 50 6))) SCENE))
-
 
 ; AnimationState -> AnimationState
 ; Adds 1 to the number of clock ticks since the animation started.
