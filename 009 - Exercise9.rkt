@@ -5,7 +5,7 @@
 (if (boolean? in) (if in 10 20)
 (if (and (number? in) (> in 0)) (- in 1) in))))
 
-(cond                                                       ;; an  alternative solution using cond expressions
+(cond                                                       ; an  alternative solution using cond expressions
   [(string? in) (string-length in)]
   [(image? in) (* (image-width in)(image-height in))]
   [(boolean? in)
