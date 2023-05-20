@@ -21,12 +21,14 @@
 ; WorldState -> Image
 ; Places the cat into the BACKGROUND according to the given world state.
 ; Whenever the cat disappears on the right, it reappears on the left.
-; (define (render cw)
-;   (... modulo cw ...))
+; (define (render cw) img)
 
 ; given: 10, expected: 48
 ; given: 0, expected: 38
 ; given: 800, expected: 88
+
+; (define (render cw)
+;   (... modulo cw ...))
 
 (define (render cw)
   (place-image CAT1 (modulo(+ cw X-CAT1)(image-width BACKGROUND)) Y-CAT1 BACKGROUND))
