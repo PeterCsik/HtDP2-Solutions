@@ -130,6 +130,6 @@
   (big-bang "resting"
     [on-key launch]
     [to-draw show]
-    [on-tick fly]
+    [on-tick fly 0.3]
     [stop-when end?]
     ))
