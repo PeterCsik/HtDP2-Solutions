@@ -1,12 +1,5 @@
 (define (show x)
   (cond
-    [(string? x) ...]             ; It would be incorrect to use (string? x) condition, because big-bang function accepts only Number for a WorldState (x) 
-    [(<= -3 x -1) ...]
-    [(>= x 0) ...]))
- 
- 
- (define (show x)
-  (cond
-    [(zero? x) ...]               ; To represent "resting" with a Number (instead of a String) is to use 0 for WorldState 
-    [(<= -3 x -1) ...]
+    [(string? x) ...]             ; It would be incorrect to use (string=? "resting" x) condition, because the condition would accept only "resting" word as an input. 
+    [(<= -3 x -1) ...]            ; Using (string? x) condition is more flexible, it accepts any string, even an empty string.
     [(>= x 0) ...]))
