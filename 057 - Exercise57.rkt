@@ -15,7 +15,7 @@
 ; – "resting"
 ; – a Number between -3 and -1
 ; – a NonnegativeNumber 
-;Interpretation: "resting" represents a grounded rocket,
+; Interpretation: "resting" represents a grounded rocket,
 ; in countdown mode, a number denotes the number of pixels between the
 ; top of the canvas and the rocket (its height)
 
