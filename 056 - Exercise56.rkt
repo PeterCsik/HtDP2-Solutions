@@ -34,18 +34,18 @@
 
  (define (show x)
   (cond
-   [(string? x) (center-rocket 0)]
+   [(string? x) (distance-rocket 0)]
     [(<= -3 x -1)(overlay/align "center" "middle"
                     (text (number->string x) 60 "gray")
-                    (center-rocket 0))]
-    [(>= x 0) (center-rocket x)]))
+                    (distance-rocket 0))]
+    [(>= x 0) (distance-rocket x)]))
 
-(define (center-rocket x)                                      ; an auxiliary function used in "show" function
-  (place-image ROCKET (/ WIDTH 2) (- HEIGHT x CENTER) BACKG))
+(define (distance-rocket x)                                      ; an auxiliary function used in the "show" function
+  (place-image ROCKET (/ WIDTH 2) (- HEIGHT x CENTER) BACKG))    ; it measures the distance between the top of the canvas and the top of rocket
 
-(check-expect (show "resting")(center-rocket 0))
-(check-expect (show -3)(overlay/align "center" "middle" (text (number->string -3) 60 "gray") (center-rocket 0)))
-(check-expect (show 5) (center-rocket 5))
+(check-expect (show "resting")(distance-rocket 0))
+(check-expect (show -3)(overlay/align "center" "middle" (text (number->string -3) 60 "gray") (distance-rocket 0)))
+(check-expect (show 5) (distance-rocket 5))
 
 ; LRCD KeyEvent -> LRCD
 ; Starts the countdown when space bar is pressed,
