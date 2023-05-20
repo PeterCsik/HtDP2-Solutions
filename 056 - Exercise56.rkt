@@ -41,7 +41,7 @@
     [(>= x 0) (distance-rocket x)]))
 
 (define (distance-rocket x)                                      ; an auxiliary function used in the "show" function
-  (place-image ROCKET (/ WIDTH 2) (- HEIGHT x CENTER) BACKG))    ; it measures the distance between the top of the canvas and rocket's top
+  (place-image ROCKET (/ WIDTH 2) (- HEIGHT x CENTER) BACKG))    ; it counts the distance between the top of the canvas and the rocket's bottom
 
 (check-expect (show "resting")(distance-rocket 0))
 (check-expect (show -3)(overlay/align "center" "middle" (text (number->string -3) 60 "gray") (distance-rocket 0)))
