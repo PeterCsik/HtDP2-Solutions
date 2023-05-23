@@ -50,7 +50,7 @@
 (check-expect (traffic-light-next "green") "yellow")
 (check-expect (traffic-light-next "yellow") "red")
 
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (define (TheTrafficLight cs)
   (big-bang "yellow"
