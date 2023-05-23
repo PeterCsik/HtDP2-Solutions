@@ -124,7 +124,7 @@
 (check-expect (end? 350) #true)
 (check-expect (end? "a") #false)
  
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (define (main x)
   (big-bang "resting"
