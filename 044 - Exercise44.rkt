@@ -122,7 +122,7 @@
 (check-expect (end? 40) #false)
 (check-expect (end? 400) #true)
 
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (define (main as)
   (big-bang as
