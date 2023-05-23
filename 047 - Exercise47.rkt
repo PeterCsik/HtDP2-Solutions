@@ -105,7 +105,7 @@
 (check-expect (end? 101) #true)
 (check-expect (end? 15) #false)
 
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (define (gauge-prog cw)
   (big-bang 100
