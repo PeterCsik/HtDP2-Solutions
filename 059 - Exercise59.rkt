@@ -20,14 +20,14 @@
 ; given: green, expected: yellow
 ; given: yellow, expected: red
 
-; (define (tl-next s)
-;    ( ... s ...))
+; (define (tl-next cs)
+;    ( ... cs ...))
 
-(define (tl-next s)
+(define (tl-next cs)
   (cond
-    [(string=? "red" s) "green"]
-    [(string=? "green" s) "yellow"]
-    [(string=? "yellow" s) "red"]))
+    [(string=? "red" cs) "green"]
+    [(string=? "green" cs) "yellow"]
+    [(string=? "yellow" cs) "red"]))
 
 (check-expect (tl-next "red") "green")
 (check-expect (tl-next "green") "yellow")
