@@ -66,7 +66,7 @@
 (check-expect (tock 10) 13)
 (check-expect (tock 0) 3)
 
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (define (cat-prog cw)
   (big-bang cw
