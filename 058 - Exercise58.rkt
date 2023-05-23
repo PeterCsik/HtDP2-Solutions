@@ -48,6 +48,6 @@
 (check-expect (sales-tax 10000) (* 0.08 10000))
 (check-expect (sales-tax 99999) (* 0.08 99999))
  
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (sales-tax p)
