@@ -1,4 +1,4 @@
-(define (reward s)
+(define (reward s)                                ; function
   (cond
     [(<= 0 s 10) "bronze"]
     [(and (< 10 s) (<= s 20)) "silver"]
