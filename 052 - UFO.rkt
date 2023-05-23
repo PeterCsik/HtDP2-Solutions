@@ -1,6 +1,6 @@
 ; ---------- Constant definitions ----------
 
-(define WIDTH 300) ; distances in terms of pixels 
+(define WIDTH 300)    ; distances in terms of pixels 
 (define HEIGHT 100)
 (define CLOSE (/ HEIGHT 3))
 (define MTSCN (empty-scene WIDTH HEIGHT)) ; short for empty scene 
