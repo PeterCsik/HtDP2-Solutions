@@ -29,7 +29,7 @@
 (check-expect (traffic-light-next "green") "yellow")
 (check-expect (traffic-light-next "yellow") "red")
 
-; ---------- Application Function ----------
+; ---------- Application ----------
 
 (traffic-light-next "red")
 (traffic-light-next "green")
