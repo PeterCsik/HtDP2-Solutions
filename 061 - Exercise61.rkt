@@ -14,7 +14,6 @@
 (check-expect (tl-next- ... YELLOW) RED)
      
      
-     
 (define (tl-next-numeric cs)
   (modulo (+ cs 1) 3))
      
