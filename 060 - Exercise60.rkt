@@ -5,9 +5,9 @@
 ; ---------- Data definitions ----------
 
 ; A N-TrafficLight is one of:
-; – 0 interpretation the traffic light shows red
-; – 1 interpretation the traffic light shows green
-; – 2 interpretation the traffic light shows yellow
+; –- 0 interpretation the traffic light shows red
+; –- 1 interpretation the traffic light shows green
+; –- 2 interpretation the traffic light shows yellow
 
 ; ---------- Function definitions ----------
 
