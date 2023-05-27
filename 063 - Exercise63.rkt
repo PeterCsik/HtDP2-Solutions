@@ -4,7 +4,7 @@
       (sqr (posn-y ap)))))
  
  
-(distance-to-0 (make-posn 3 4))             ; result: 5
+(distance-to-0 (make-posn 3 4))                 ; result: 5
 (sqrt
   (+  (sqr (posn-x (make-posn 3 4))
       (sqr (posn-y (make-posn 3 4)))))
@@ -21,6 +21,63 @@
 (sqrt 25)
 5
 
-(distance-to-0 (make-posn 6 (+ 2 4)))       ; result: #i8.48528137423857
+(distance-to-0 (make-posn 6 (+ 2 4)))           ; result: #i8.48528137423857
+
+(sqrt
+  (+  (sqr (posn-x (make-posn 6 (+ 2 4)))
+      (sqr (posn-y (make-posn 6 (+ 2 4)))))))
+
+(sqrt
+  (+  (sqr 6)
+      (sqr (posn-y (make-posn 6 (+ 2 4))))))
+
+(sqrt
+  (+  36
+      (sqr (posn-y (make-posn 6 (+ 2 4))))))
  
-(+ (distance-to-0 (make-posn 12 5)) 10)     ; #i8.48528137423857
+ (sqrt
+  (+  36
+      (sqr (+ 2 4))))
+ 
+ (sqrt
+  (+  36
+      (sqr 6)))
+ 
+ (sqrt (+ 36 36))
+ 
+ (sqrt 72)
+ 
+ 
+(+ (distance-to-0 (make-posn 12 5)) 10)         ; 23
+
+(sqrt
+  (+  (sqr (posn-x (make-posn 6 (+ 2 4)))
+      (sqr (posn-y (make-posn 6 (+ 2 4)))))))
+
+(sqrt
+  (+
+   (sqr (posn-x (make-posn 12 5)))
+   (sqr (posn-y (make-posn 12 5)))))
+ 10)
+ 
+ (sqrt
+  (+
+   (sqr 12)
+   (sqr (posn-y (make-posn 12 5)))))
+ 10)
+ 
+ (sqrt
+  (+
+   144
+   (sqr (posn-y (make-posn 12 5)))))
+ 10)
+ 
+ (+ (sqrt (+ 144 (sqr 5))) 10)
+ 
+ (+ (sqrt (+ 144 25)) 10)
+ 
+ (+ (sqrt 169) 10)
+ 
+ (+ 13 10)
+ 
+ 23
