@@ -18,8 +18,11 @@
       (sqr 4)))
       
 (sqrt (+ 9 16))
+
 (sqrt 25)
+
 5
+
 
 (distance-to-0 (make-posn 6 (+ 2 4)))           ; result: #i8.48528137423857
 
@@ -58,25 +61,31 @@
   (+
    (sqr (posn-x (make-posn 12 5)))
    (sqr (posn-y (make-posn 12 5)))))
- 10)
+    10)
  
  (sqrt
   (+
    (sqr 12)
    (sqr (posn-y (make-posn 12 5)))))
- 10)
+   10)
  
  (sqrt
   (+
    144
    (sqr (posn-y (make-posn 12 5)))))
- 10)
+    10)
  
- (+ (sqrt (+ 144 (sqr 5))) 10)
+ (+ (sqrt 
+    (+ 144 
+    (sqr 5))) 
+    10)
  
- (+ (sqrt (+ 144 25)) 10)
+ (+ (sqrt 
+    (+ 144 25)) 
+    10)
  
- (+ (sqrt 169) 10)
+ (+ (sqrt 169) 
+    10)
  
  (+ 13 10)
  
