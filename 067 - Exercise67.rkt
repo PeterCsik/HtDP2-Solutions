@@ -14,7 +14,6 @@
 ; the instance represents a bouncing ball with an initial location of 10
 ; and a direction of "up"
 
-
 ; other instances:
 (make-balld 10 "down")
 (make-balld 86 "down"
