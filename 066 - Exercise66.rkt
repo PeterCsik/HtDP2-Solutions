@@ -8,7 +8,7 @@
 (make-pet "Hugo" "25879")
 
 (define-struct CD [artist title price])
-(make-CD "Coldpla" "Music of the Spheres" "Grammy 2023") 
+(make-CD "Coldpla" "Music of the Spheres" "10.99") 
 
 (define-struct sweater [material size producer])
 (make-sweater "silk" "S" "Prada")
