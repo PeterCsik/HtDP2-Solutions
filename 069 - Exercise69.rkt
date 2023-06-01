@@ -18,7 +18,7 @@ name  number
 
 (define-struct CD [artist title price])
 
-              pet
+              CD
 artist  title price
 
 
