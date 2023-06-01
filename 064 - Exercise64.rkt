@@ -21,6 +21,7 @@
 ;    ... (posn-y p) ...))
 
 (define (manhattan-distance p)
-  (+ (posn-x p) (posn-y p)))
+  (+ (abs (posn-x p))
+     (abs (posn-y p))))
 
 ; It does not matter which strategy is followed, unless going in the opposite direction.
