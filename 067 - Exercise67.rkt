@@ -2,11 +2,9 @@
 (define-struct balld (location direction))
 (make-balld 10 "up")
 
-
 ; there is a constant named "SPEED", however, it is note used or referenced
 
 ; there is a structure type "balld" that has two fields: "location" and "direction"
-
 
 ; (make-balld 10 "up") creates an instance of the "balld" structure. The value 10 is assigned
 ; to the "location" field and the string "up" is assigned to the "direction" field
