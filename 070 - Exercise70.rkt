@@ -8,7 +8,7 @@
                            (make-phone 208 "112-9981")))
 
 (centry-name entry)
-; == DrRacket replaces entry
+; == DrRacket replaces entry with
 (make-centry
   "Shriram Fisler"
   (make-phone 207 "363-2421")
