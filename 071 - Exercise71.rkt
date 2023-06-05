@@ -9,7 +9,12 @@
 (define game0
   (make-game MIDDLE MIDDLE (make-posn CENTER CENTER)))
 
-; -- evaluation --
+; -- Evaluation of the following expressions --
+
+; (game-ball game0)
+; (posn? (game-ball game0))
+; (game-left-player game0)
+
 
 (game-ball game0)
 ; == DrRacket replaces all constants with values
