@@ -11,9 +11,9 @@
 ; ---------- Data definitions ----------
 
 ; A Price falls into one of three intervals: 
-; — 0 through 1000 (excluded)
-; — 1000 (included) through 10000 (excluced)
-; — 10000 (included) and above.
+; -- 0 through 1000 (excluded)
+; -- 1000 (included) through 10000 (excluced)
+; -- 10000 (included) and above.
 ; Interpretation: the price of an item.
 
 ; ---------- Function definitions ----------
