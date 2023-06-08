@@ -10,6 +10,7 @@
 ;    [on-mouse reset-dot]
     [to-draw scene+dot]))
 
+
 ; Posn -> Image
 ; adds a red spot to MTS at p
 ;(define (scene+dot p) MTS)
