@@ -37,8 +37,8 @@
 ; that looks like the name of a predicate?
 ; Answer: I find it to be an option if one is interested in
 ; a specific "Yes/No" type of question. Like in the examples below,
-; where we are only interested in whether the person is
-; a male or not
+; where we are specifically interested in whether the person is
+; a male or not.
 (define club-member (make-person "John" "Jones" "#true"))
 (person-male? club-member)
 
