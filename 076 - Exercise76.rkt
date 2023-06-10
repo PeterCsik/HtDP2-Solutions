@@ -1,17 +1,21 @@
 (define-struct movie [title producer year])
 ; A Movie is a structure:
 ;    (make-movie String String Number)
-; interpretation a title of a movie, its producer and year of release
+; interpretation 1 a title of a movie, its producer, and year of release
+; interpretation 2 a title of a movie, its producre, and year of production
 
 (define-struct person [name hair eyes phone])
 ; A Person is a structure:
 ;   (make-person String String String String)
-; interpretation a person's name, hair color, eyes color, and phone number
+; interpretation 1 a person's name, hair color, eyes color, and phone number
+; interpretation 2 a person's name, hair size, eyes color, and phone number
 
 (define-struct pet [name number])
 ; A Pet is a structure:
 ;   (make-pet String Number)
-; interpretation a pet's name and its identification number
+; interpretation 1 a pet's name and its identification number
+; interpretation 2 a pet's name, and pet's microchip number
+; interpretation 3 a pet's name, and pet's registry number
 
 (define-struct CD [artist title price])
 ; A CD is a structure:
