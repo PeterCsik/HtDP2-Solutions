@@ -14,7 +14,6 @@
 "red"
 
 
-
 ; H is a Number between 0 and 100.
 ; interpretation represents a happiness value
 
