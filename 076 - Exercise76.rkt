@@ -21,4 +21,4 @@
 (define-struct sweater [material size producer])
 ; A Sweater is a structure:
 ;   (make-swater String String String)
-; interpretaton sweater's material, size of the sweater, and producer name
+; interpretation sweater's material, size of the sweater, and producer name
