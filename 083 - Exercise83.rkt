@@ -28,8 +28,8 @@
                        (text "world" TEXT-SIZE TEXT-COLOR))
                       SCENE))
 
-;(define (render text)
-;  (... (editor-pre text) ... (editor-post text) ...))
+;(define (render txt)
+;  (... (editor-pre txt) ... (editor-post txt) ...))
 
 ;(define txt (make-editor "hello" "world"))
 
@@ -40,6 +40,3 @@
                   CURSOR
                   (text (editor-post txt) TEXT-SIZE TEXT-COLOR))
                  SCENE))
-
-
-
