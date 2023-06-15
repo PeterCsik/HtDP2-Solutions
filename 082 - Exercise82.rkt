@@ -11,7 +11,7 @@
 ; tlw tlw -> String
 ; consumes two tlws and
 ; it produces a word that indicates where the given ones agree and disagree,
-; it retains the content of the structure fields if two agreee, otherwise
+; it retains the content of the structure fields if two agree, otherwise
 ; it places #false in the field of the resulting word
 ; (define (compare-word m n) "a"))
 
