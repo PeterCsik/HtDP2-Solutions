@@ -17,7 +17,7 @@
 
 
 ; Editor -> Image
-; renders the text within an empty space of 200 x 20 pixels
+; develops an image that renders the text within an empty scene
 ; (define (render editor) img)
 
 (check-expect (render (make-editor "hello" "world"))
