@@ -15,14 +15,14 @@
 ; it places #false in the field of the resulting word
 ; (define (compare-word m n) "a"))
 
-;(check-expect (compare-word ex1 ex1) "fox")
-;(check-expect (compare-word ex1 ex3) "#false o #false")
+; (check-expect (compare-word ex1 ex1) "fox")
+; (check-expect (compare-word ex1 ex3) "#false o #false")
 
-;(define (compare-words m n)
-;  (... (tlw-first-letter m) ... (tlw-second-letter m)
-;       ... (tlw-third-letter m)
-;       ... (tlw-first-letter n) ... (tlw-second-letter n)
-;       ... (tlw-third-letter n) ...))
+; (define (compare-words m n)
+;   (... (tlw-first-letter m) ... (tlw-second-letter m)
+;        ... (tlw-third-letter m)
+;        ... (tlw-first-letter n) ... (tlw-second-letter n)
+;        ... (tlw-third-letter n) ...))
 
 (define (compare-word m n)
   (cond
