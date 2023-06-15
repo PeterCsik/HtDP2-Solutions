@@ -5,9 +5,9 @@
 ; whose visible text is (string-apend s t) with
 ; the cursor displayed between s and t
 
-(define ex1 (make-editor "hello" "world"))
-(define ex2 (make-editor "Silicon" "Valley"))
-(define ex3 (make-editor "Knight" "Rider"))
+(define ed1 (make-editor "hello" "world"))
+(define ed2 (make-editor "Silicon" "Valley"))
+(define ed3 (make-editor "Knight" "Rider"))
 
 
 (define CURSOR (rectangle 1 20 "solid" "red"))
@@ -28,15 +28,13 @@
                        (text "world" TEXT-SIZE TEXT-COLOR))
                       SCENE))
 
-;(define (render txt)
-;  (... (editor-pre txt) ... (editor-post txt) ...))
+;(define (render ed)
+;  (... (editor-pre ed) ... (editor-post ed) ...))
 
-;(define txt (make-editor "hello" "world"))
-
-(define (render txt)
+(define (render ed)
   (overlay/align "left" "center"
                  (beside
-                  (text (editor-pre txt) TEXT-SIZE TEXT-COLOR)
+                  (text (editor-pre ed) TEXT-SIZE TEXT-COLOR)
                   CURSOR
-                  (text (editor-post txt) TEXT-SIZE TEXT-COLOR))
+                  (text (editor-post ed) TEXT-SIZE TEXT-COLOR))
                  SCENE))
