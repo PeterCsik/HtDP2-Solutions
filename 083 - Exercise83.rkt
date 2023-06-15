@@ -28,8 +28,8 @@
                        (text "world" TEXT-SIZE TEXT-COLOR))
                       SCENE))
 
-;(define (render ed)
-;  (... (editor-pre ed) ... (editor-post ed) ...))
+; (define (render ed)
+;   (... (editor-pre ed) ... (editor-post ed) ...))
 
 (define (render ed)
   (overlay/align "left" "center"
