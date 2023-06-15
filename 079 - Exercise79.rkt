@@ -19,9 +19,8 @@
 
 0
 38
+72
 100
-12
-78
 
 
 (define-struct person [fstname lstname male?])
