@@ -18,10 +18,7 @@
 (define ed2 (make-editor "Silicon" "Valley"))
 (define ed3 (make-editor "Knight" "Rider"))
 
-
-
-
-
+; ---------- Function definitions ----------
 
 ; Editor -> Image
 ; develops an image that renders the text within an empty scene
