@@ -129,10 +129,9 @@
 ;   (... (editor-pre ed) ... (editor-post ed)
 ;        ... ke ... ))
 
-;(define (move-cursor-right ed ke)
-
 (define (move-cursor-right ed)
   (make-editor (string-append (editor-pre ed) (string-first (editor-post ed))) (substring (editor-post ed) 1 (string-length (editor-post ed))))) 
+
 
 ; String -> String
 ; return the first character of the string
@@ -146,6 +145,7 @@
 (define (string-first x)
   (if (> (string-length x) 0) (string-ith x 0) "Empty string")
   )
+
 
 ; String -> String
 ; return the first character of the strign
