@@ -1,3 +1,12 @@
+; ---------- Constant definitions ----------
+
+(define CURSOR (rectangle 1 20 "solid" "red"))
+(define SCENE (empty-scene 200 20))
+(define TEXT-SIZE 16)
+(define TEXT-COLOR "black")
+
+; ---------- Data definitions ----------
+
 (define-struct editor [pre post])
 ; An Editor is a structure:
 ;   (make-editor String String)
@@ -10,10 +19,8 @@
 (define ed3 (make-editor "Knight" "Rider"))
 
 
-(define CURSOR (rectangle 1 20 "solid" "red"))
-(define SCENE (empty-scene 200 20))
-(define TEXT-SIZE 16)
-(define TEXT-COLOR "black")
+
+
 
 
 ; Editor -> Image
