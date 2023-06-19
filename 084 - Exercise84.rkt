@@ -77,9 +77,9 @@
     [(key=? ke "right") (move-cursor-right ed)]
         ))
 
-;; ---------- Function definitions (Auxiliarry functions) ----------
+;; ---------- Function definitions (Auxiliarry functions of "Edit" function) ----------
 
-;;; ---------- Auxiliarry function I ----------
+;;; ---------- Auxiliarry function I "add-character" ----------
 
 ; Editor KeyEevent -> Editor
 ; adds a single-character to the end of the pre field of ed
@@ -92,13 +92,9 @@
 ;        ... ke ... ))
 
 (define (add-character ed ke)
-  (cond
-    [(<(image-width(text (string-append (editor-pre ed)(editor-post ed)) TEXT-SIZE TEXT-COLOR))190)
-  (make-editor (string-append (editor-pre ed) ke) (editor-post ed))]
-   
-    ))
+  (make-editor (string-append (editor-pre ed) ke) (editor-post ed)))
 
-;;; ---------- Auxiliarry function II ----------
+;;; ---------- Auxiliarry function II "delete-character" ----------
 
 ; Editor -> Editor
 ; deletes the character immediatelly to the left  of the cursor
@@ -113,7 +109,7 @@
 (define (delete-character ed)
   (make-editor (substring (editor-pre ed) 0 (-(string-length (editor-pre ed)) 1)) (editor-post ed)))
 
-;;; ---------- Auxiliarry function III ----------
+;;; ---------- Auxiliarry function III "move-cursor-left" ----------
 
 ; Editor KeyEvent -> Editor
 ; moves the cursor one character to the left (if any)
@@ -128,7 +124,7 @@
 (define (move-cursor-left ed)
   (make-editor (substring (editor-pre ed) 0 (- (string-length (editor-pre ed)) 1)) (string-append (string-last (editor-pre ed)) (editor-post ed))))
   
-;;; ---------- Auxiliarry function IV ----------
+;;; ---------- Auxiliarry function IV "move-cursor-right" ----------
 
 ; Editor KeyEvent -> Editor
 ; moves the cursor one character to the right (if any)
@@ -143,7 +139,7 @@
 (define (move-cursor-right ed)
   (make-editor (string-append (editor-pre ed) (string-first (editor-post ed))) (substring (editor-post ed) 1 (string-length (editor-post ed))))) 
 
-;;; ---------- Auxiliarry function V ----------
+;;; ---------- Auxiliarry function V "string-first" ----------
 
 ; String -> String
 ; returns the first character of the string
@@ -158,7 +154,7 @@
   (if (> (string-length x) 0) (string-ith x 0) "Empty string")
   )
 
-;;; ---------- Auxiliarry function VI ----------
+;;; ---------- Auxiliarry function VI "string-last" ----------
 
 ; String -> String
 ; returns    the first character of the strign
