@@ -54,7 +54,7 @@
 ;; ---------- "Edit" function ----------
 
 ; Editor KeyEvent -> Editor
-; -- adds a charachater,
+; -- adds a character,
 ; -- deletes a character,
 ; -- moves the cursor to the left
 ; -- moves the cursor to the right
