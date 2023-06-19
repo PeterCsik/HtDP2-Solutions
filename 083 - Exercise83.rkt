@@ -11,7 +11,7 @@
 ; An Editor is a structure:
 ;   (make-editor String String)
 ; interpretation (make-editor s t) describes an editor
-; whose visible text is (string-apend s t) with
+; whose visible text is (string-append s t) with
 ; the cursor displayed between s and t
 
 (define ed1 (make-editor "hello" "world"))
@@ -20,9 +20,11 @@
 
 ; ---------- Function definitions ----------
 
+;; ---------- "Render" function ----------
+
 ; Editor -> Image
 ; develops an image that renders the text within an empty scene
-; (define (render editor) img)
+; (define (render ed) img)
 
 (check-expect (render (make-editor "hello" "world"))
               (overlay/align "left" "center"
