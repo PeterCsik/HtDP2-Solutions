@@ -2,7 +2,7 @@
 
 ;; ---------- Cat and Scene ----------
 
-(define CAT1 .)       ; replace "..." with an actual image
+(define CAT1 .)       ; replace "." with an actual image
 
 (define SCENE
   (empty-scene (*(image-width CAT1) 10) (*(image-height CAT1) 1.1)))
