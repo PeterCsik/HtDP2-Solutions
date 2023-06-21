@@ -114,7 +114,7 @@
 ; ---------- Application ----------
 
 (define (happy-cat hc)
-  (big-bang hc
+  (big-bang (make-VCat (VCat-x hc) 100)
     [to-draw render]
     [on-tick tock]
     [on-key handle-key]
