@@ -1,4 +1,4 @@
-(define-struct VCat (x-coordinate happiness)
+(define-struct VCat (x happiness)
 ; A VCat is a structure:
 ;   (make-VCat Number Number)
 ; interpretation (make-VCat x h) keeps the cat's x-coordinate
