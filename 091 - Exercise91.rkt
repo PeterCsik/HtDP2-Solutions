@@ -51,6 +51,7 @@
 (define (red-bar hc)
   (rectangle (VCat-happiness hc) GAUGE-HEIGHT "solid" "red"))
 
+
 ; VCat -> Image
 ; Places the cat into the SCENE according to the given world state.
 ; Whenever the cat disappears on the right, it reappears on the left.
