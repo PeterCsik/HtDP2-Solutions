@@ -86,8 +86,10 @@
 ; Moves the cat by 3 pixels for every clock tick.
 ; (define (tock hc) hc)
 
-;(check-expect (tock (make-VCat 10 100 "left")) (make-VCat 13 99.9 "left"))
-;(check-expect (tock (make-VCat 0 100 "right")) (make-VCat 3 99.9 "right"))
+(check-expect (tock (make-VCat 10 100 "left")) (make-VCat 7 99.9 "left"))
+(check-expect (tock (make-VCat 750 100 "right")) (make-VCat 753 99.9 "left"))
+(check-expect (tock (make-VCat 0 100 "right")) (make-VCat 3 99.9 "right"))
+(check-expect (tock (make-VCat 0 100 "left")) (make-VCat -3 99.9 "right"))
 
 ; (define (tock hc)
 ;   (... (VCat-x hc) ... (VCat-happiness hc) ...
