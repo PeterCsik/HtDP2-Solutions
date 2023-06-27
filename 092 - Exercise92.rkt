@@ -129,8 +129,7 @@
 
 
 ; VCham KeyEvent -> VCham
-; Changes the level of chameleon's happiness by feeding chameleon with using up key events.
-; If the down arrow key is used, it increases the happiness level by 2.
+; Changes the level of chameleon's happiness by feeding chameleon, and changes chameleon's colour
 ; (define (handle-key hc ke) hc)
 
 (check-expect (handle-key (make-VCham 0 80 "blue") "down") (make-VCham 0 (+ 80 2) "blue"))
