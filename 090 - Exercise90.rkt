@@ -28,7 +28,7 @@
 ; (in pixels from the left margin), and its happiness
 ; (a number from 0 to 100)
 
-(define ex1 (make-VCat 10 100))
+(define ex1 (make-VCat 10 150))
 (define ex2 (make-VCat 1 100))
 (define ex3 (make-VCat 20 10))
 (define ex4 (make-VCat 100 20))
@@ -36,17 +36,24 @@
 ; ---------- Function definitions ----------
 
 ; VCat -> Image
-; Produces a red bar with a width according to the WorldState.
+; Produces a red bar with a width according to the WorldState, interval [0, 100]
 ; (define (red-bar hc) img)
 
 (check-expect (red-bar (make-VCat 10 100)) (rectangle 100 GAUGE-HEIGHT "solid" "red"))
 (check-expect (red-bar (make-VCat 100 20)) (rectangle 20 GAUGE-HEIGHT "solid" "red"))
+(check-expect (red-bar (make-VCat 100 300)) (rectangle 100 GAUGE-HEIGHT "solid" "red"))
+(check-expect (red-bar (make-VCat 10 0)) (rectangle 0 GAUGE-HEIGHT "solid" "red"))
 
 ; (define (red-bar hc)       
 ;    (... (VCat-happiness hc) ...))
 
 (define (red-bar hc)
-  (rectangle (VCat-happiness hc) GAUGE-HEIGHT "solid" "red"))
+  (rectangle
+   (cond
+     [(and(>(VCat-happiness hc)0)(< (VCat-happiness hc) 100)) (VCat-happiness hc)]
+     [(<= (VCat-happiness hc) 0) 0]
+     [(>= (VCat-happiness hc) 100) 100])
+     GAUGE-HEIGHT "solid" "red"))
 
 ; VCat -> Image
 ; Places the cat into the SCENE according to the given world state.
