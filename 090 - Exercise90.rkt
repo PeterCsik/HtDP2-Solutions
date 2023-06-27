@@ -93,7 +93,8 @@
 (check-expect (tock (make-VCat 0 100)) (make-VCat 3 99.9))
 
 ; (define (tock hc)
-;   (... (VCat-x hc) ...))
+;   (... (VCat-x hc) ...
+;      ... (VCat-happines hc) ...))
 
 (define (tock hc)
   (make-VCat(+ (VCat-x hc) 3) (- (VCat-happiness hc) 0.1)))
@@ -110,7 +111,8 @@
 (check-expect (handle-key (make-VCat 0 80) "right") (make-VCat 0 80))
 
 ; (define (handle-key hc ke)
-;   (... (VCat-happiness hc) ... ke ...))
+;   (... (VCat-happiness hc) ... (VCat-x hc) ...
+;      ... ke ...))
 
 (define (handle-key hc ke)
   (cond
