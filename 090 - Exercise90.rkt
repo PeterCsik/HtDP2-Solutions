@@ -107,6 +107,7 @@
 
 (check-expect (handle-key (make-VCat 10 100) "up") (make-VCat 10 (+ 100 1/3)))
 (check-expect (handle-key (make-VCat 0 100) "down") (make-VCat 0 (- 100 1/5)))
+(check-expect (handle-key (make-VCat 0 80) "right") (make-VCat 0 80))
 
 ; (define (handle-key hc ke)
 ;   (... (VCat-happiness hc) ... ke ...))
