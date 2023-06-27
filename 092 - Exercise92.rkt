@@ -9,10 +9,16 @@
   (empty-scene (*(image-width CHAM) 10) (*(image-height CHAM) 1.1)))
 
 (define X-CHAM                         ; the left-most edge of the CHAM
-  (round(/ (image-width CHAM)2)))       ; round is needed because the modulo function used in our chameleon accepts only integers and not decimal numbers
+  (round(/ (image-width CHAM)2)))      ; round is needed because the modulo function used in our chameleon accepts only integers and not decimal numbers
 
 (define Y-CHAM                         ; the y-coordinate of the CHAM in the BACKGROUND
   (/ (image-height CHAM)1.8))
+
+(define CHAM-WIDTH                     ; the width of chameleon
+  (- (image-width CHAM) 2))
+
+(define CHAM-HEIGHT                    ; the height of chameleon
+  (- (image-height CHAM) 2))
 
 ;; ---------- Gauge ----------
 
@@ -69,7 +75,7 @@
                              (place-image
                                     (overlay
                                      CHAM
-                                     (rectangle (image-width CHAM)(image-height CHAM) "solid" "red"))
+                                     (rectangle CHAM-WIDTH CHAM-HEIGHT "solid" "red"))
                                      (modulo(+ 10 X-CHAM)(image-width SCENE))
                                      Y-CHAM SCENE)))
 
@@ -79,7 +85,7 @@
                              (place-image
                                     (overlay
                                      CHAM
-                                     (rectangle (image-width CHAM)(image-height CHAM) "solid" "blue"))
+                                     (rectangle CHAM-WIDTH CHAM-HEIGHT "solid" "blue"))
                                      (modulo(+ 0 X-CHAM)(image-width SCENE))
                                       Y-CHAM SCENE)))
               
@@ -89,7 +95,7 @@
                              (place-image
                                     (overlay
                                      CHAM
-                                     (rectangle (image-width CHAM)(image-height CHAM) "solid" "red"))
+                                     (rectangle CHAM-WIDTH CHAM-HEIGHT "solid" "red"))
                                      (modulo(+ 800 X-CHAM)(image-width SCENE))
                                      Y-CHAM SCENE)))
   
@@ -103,7 +109,7 @@
                  (place-image
                   (overlay
                   CHAM
-                  (rectangle (image-width CHAM)(image-height CHAM) "solid" (VCham-color hc)))
+                  (rectangle CHAM-WIDTH CHAM-HEIGHT "solid" (VCham-color hc)))
                   (modulo(+ (VCham-x hc) X-CHAM)(image-width SCENE))
                   Y-CHAM SCENE)))
 
