@@ -15,7 +15,6 @@
 (define SCENE (empty-scene WIDTH HEIGHT)) ;short for empty scene
 
 
-
 (define HILLS (overlay/align/offset "left" "bottom"
                              (triangle (* 40 SCALE-UNIT) "solid" "dark blue")
                              (* -8 SCALE-UNIT) (* -2 SCALE-UNIT)
