@@ -57,7 +57,9 @@
 ; -- (make-fired UFO Tank Missile)
 ; interpretation represents the complete state of a
 ; space invader game
+
 ; Examples (3 instances):
+
 (make-aim (make-posn 20 10) (make-tank 28 -3))
 
 (make-fired (make-posn 20 10)
@@ -67,6 +69,7 @@
 (make-fired (make-posn 20 100)
             (make-tank 100 3)
             (make-posn 22 103))
+
 ; The three instances are generated according to the first or
 ; second clause of the data definition because they represent
 ; different states of word. The first instance represents the
