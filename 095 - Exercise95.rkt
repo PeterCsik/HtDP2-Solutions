@@ -72,5 +72,5 @@
 ; different states of word. The first instance represents the
 ; thank's position during aiming at the UFO. The second one
 ; shows that a missile was fired. And the last one represents
-; how the position of all objecst has changed after the fire of
+; how the position of all objects has changed after the fire of
 ; the missile.
