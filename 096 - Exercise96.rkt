@@ -54,11 +54,11 @@
 ; Examples (3 instances):
 
 ;(make-aim (make-posn 20 10) (make-tank 28 -3))
-;
+
 ;(make-fired (make-posn 20 10)
 ;            (make-tank 28 -3)
 ;            (make-posn 28 (- HEIGHT TANK-HEIGHT)))
-;
+
 ;(make-fired (make-posn 20 100)
 ;            (make-tank 100 3)
 ;            (make-posn 22 103))
