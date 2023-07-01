@@ -6,7 +6,9 @@
                            (ellipse (* 7 SCALE-UNIT) (* 1 SCALE-UNIT) "solid" "light gray")
                            (circle (* 1 SCALE-UNIT) "solid" "dark gray")))
 
-(define TANK (rectangle (* 4 SCALE-UNIT) (* 1.5 SCALE-UNIT) "solid" "light green"))
+(define TANK-WIDTH (* 4 SCALE-UNIT))
+(define TANK-HEIGHT (* 1.5 SCALE-UNIT)) 
+(define TANK (rectangle TANK-WIDTH TANK-HEIGHT "solid" "light green"))
 
 (define MISSILE (triangle (* 1 SCALE-UNIT) "solid" "red"))
 
