@@ -14,26 +14,17 @@
 (define HEIGHT (* 40 SCALE-UNIT))
 (define SCENE (empty-scene WIDTH HEIGHT)) ;short for empty scene
 
-
-
 (define HILLS (overlay/align/offset "left" "bottom"
                              (triangle (* 30 SCALE-UNIT) "solid" "dark blue")
                              (* -8 SCALE-UNIT) (* -2 SCALE-UNIT)
                              (triangle (* 20 SCALE-UNIT) "solid" "blue")
                               ))
 
-(define SCENERY (overlay/align/offset "right" "bottom"
+(define BACKGROUND (overlay/align/offset "right" "bottom"
                                   HILLS
                                   0 (* 2 SCALE-UNIT)
                                   SCENE
                                   ))
-
-(define BACKGROUND (overlay/align "middle" "bottom"
-                               MISSILE
-                               TANK
-                               UFO
-                               SCENERY))
-
 
 ; ---------- Data definitions ----------
 
