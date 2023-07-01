@@ -22,17 +22,17 @@
                              (triangle (* 20 SCALE-UNIT) "solid" "blue")
                               ))
 
-(define BACKGROUND (overlay/align/offset "right" "bottom"
+(define SCENERY (overlay/align/offset "right" "bottom"
                                   HILLS
                                   0 (* 2 SCALE-UNIT)
                                   SCENE
                                   ))
 
-(define SCENERY (overlay/align "middle" "bottom"
+(define BACKGROUND (overlay/align "middle" "bottom"
                                MISSILE
                                TANK
                                UFO
-                               BACKGROUND))
+                               SCENERY))
 
 
 ; ---------- Data definitions ----------
