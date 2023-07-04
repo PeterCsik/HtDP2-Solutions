@@ -70,8 +70,8 @@
                               (make-posn 28 (- HEIGHT TANK-HEIGHT))))
 
 (define ex2-fired (make-fired (make-posn 20 100)
-                             (make-tank 100 3)
-                             (make-posn 22 103)))
+                              (make-tank 100 3)
+                              (make-posn 22 103)))
 
 ; The three instances above are generated according to the first or
 ; second clause of the data definition because they represent
