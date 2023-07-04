@@ -34,14 +34,25 @@
 ; interpretation (make-posn x y) is the UFO's location
 ; (using the top-down, left-to-right convention)
 
+(define ex1-ufo (make-posn 40 50))
+(define ex2-ufo (make-posn 100 180))
+
 (define-struct tank [loc vel])
 ; A Tank is a structure:
 ;  (make-tank Number Number)
 ; interpretation (make-tank x dx) specifies the position:
 ; (x, HEIGHT) and the tank's speed: dx pixels/tick
 
+(define ex1-tank (make-tank 100 3))
+(define ex2-tank (make-tank 100 -3))
+
+
 ; A Missile is a Posn
 ; interpretation (make-posn x y) is the missile's place
+
+(define ex1-missile (make-posn 30 150))
+(define ex2-missile (make-posn 100 100))
+
 
 (define-struct aim [ufo tank])
 (define-struct fired [ufo tank missile])
@@ -51,19 +62,18 @@
 ; interpretation represents the complete state of a
 ; space invader game
 
-; Examples (3 instances):
+(define ex1-aim (make-aim (make-posn 20 10)
+                          (make-tank 28 -3)))
 
-;(make-aim (make-posn 20 10) (make-tank 28 -3))
+(define ex1-fired (make-fired (make-posn 20 10)
+                              (make-tank 28 -3)
+                              (make-posn 28 (- HEIGHT TANK-HEIGHT))))
 
-;(make-fired (make-posn 20 10)
-;            (make-tank 28 -3)
-;            (make-posn 28 (- HEIGHT TANK-HEIGHT)))
+(define ex2-fired (make-fired (make-posn 20 100)
+                             (make-tank 100 3)
+                             (make-posn 22 103)))
 
-;(make-fired (make-posn 20 100)
-;            (make-tank 100 3)
-;            (make-posn 22 103))
-
-; The three instances are generated according to the first or
+; The three instances above are generated according to the first or
 ; second clause of the data definition because they represent
 ; different states of word. The first instance represents the
 ; thank's position during aiming at the UFO. The second one
