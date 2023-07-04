@@ -17,7 +17,7 @@
 
 ;(define (time->seconds p)
 ;  (... (point-in-time-hour p) ... (point-in-time-minute p)
-;       ... (point-in-time-second p)))
+;       ... (point-in-time-second p) ...))
 
 (define (time->seconds p)
   (+ (* (point-in-time-hour p) 60 60)
