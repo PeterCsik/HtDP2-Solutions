@@ -9,8 +9,12 @@
 ;; given: "hello world", expected: "hello worl"
 ;; given: "b", expected: ""
 
-;; (define (string-rest str)
+;; (define (string-remoive-last str)
 ;;   (... str ...))
 
 (define (string-remove-last str)
   (substring str 0 (-(string-length str) 1)))
+
+(string-remove-last "abc")            ; returns "ab", the expected value
+(string-remove-last "hello world")    ; returns "hello worl", the expected value
+(sstring-remove-last "b")              ; returns "", the expected value
