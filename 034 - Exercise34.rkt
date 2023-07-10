@@ -14,3 +14,7 @@
 
 (define (string-first str)
   (substring str 0 1))
+
+(string-first "abc")            ; returns "a", the expected value
+(string-first "hello world")    ; returns "h", the expected value
+(string-first "b")              ; returns "b", the expected value
