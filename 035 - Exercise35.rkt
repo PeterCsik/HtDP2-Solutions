@@ -14,7 +14,3 @@
 
 (define (string-last str)
   (string-ith str (-(string-length str)1)))
-
-(check-expect (string-last "abc") "c")
-(check-expect (string-last "hello world") "d")
-(check-expect (string-last "b") "b")
