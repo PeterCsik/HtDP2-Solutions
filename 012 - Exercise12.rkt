@@ -1,7 +1,7 @@
 (define (cvolume a)
-  (*(sqr a)
-    a))
+  (* (sqr a)
+     a))
 
 (define (csurface a)
-  (*(sqr a)
-    6))
+  (* (sqr a)
+     6))
