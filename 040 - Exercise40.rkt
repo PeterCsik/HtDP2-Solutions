@@ -3,7 +3,7 @@
 
 ;; WorldState -> WorldState (cw)
 ;; moves the car by 3 pixels for every clock tick
-; (define (tock cw) 0)
+;; (define (tock cw) 0)
 
 ;; given: 20, expected 23
 ;; given: 100, expected 103
