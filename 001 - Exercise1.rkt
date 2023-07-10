@@ -2,4 +2,4 @@
 (define y 4)
 
 (sqrt (+ (sqr x) (sqr y)))
-(sqrt (+ (* x x) (* y y)))      ; an alternative solution
+(sqrt (+ (* x x) (* y y)))     ;; an alternative solution
