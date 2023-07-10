@@ -22,7 +22,6 @@
 ;; ((<= (image-height ...) (image-width ...)) "wide"))
 ;; "tall"                                                      ; the function returned "tall"
 
-
 (define (image-classify img)                                   ; the fixed version of the function
   (cond ((> (image-height img) (image-width img))  "tall")     ; >= was changed to >
         ((= (image-height img) (image-width img))  "square")
