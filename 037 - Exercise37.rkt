@@ -14,3 +14,7 @@
 
 (define (string-rest str)
   (substring str 1 (string-length str)))
+
+(string-rest "abc")            ; returns "bc", the expected value
+(string-rest "hello world")    ; returns "ello world", the expected value
+(string-rest "b")              ; returns "", the expected value
