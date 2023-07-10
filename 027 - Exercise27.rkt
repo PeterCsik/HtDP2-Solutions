@@ -6,7 +6,8 @@
 (define VARIABLE-COST 0.04)
 
 (define (attendees ticket-price)
-  (- BASE-ATTENDANCE (* (- ticket-price BASE-TICKET-PRICE) (/ ATTENDANCE-CHANGE TICKET-PRICE-CHANGE))))
+  (- BASE-ATTENDANCE
+     (* (- ticket-price BASE-TICKET-PRICE) (/ ATTENDANCE-CHANGE TICKET-PRICE-CHANGE))))
 
 (define (revenue ticket-price)
   (* ticket-price (attendees ticket-price)))
