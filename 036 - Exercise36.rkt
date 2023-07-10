@@ -13,3 +13,6 @@
 
 (define (image-area img)
   (* (image-height img)(image-width img)))
+
+(image-area (rectangle 100 20 "solid" "black"))        ; returns 2000, the expected value
+(image-area (rectangle 100 100 "solid" "black"))       ; returns 10000, the expected value
