@@ -25,7 +25,6 @@
 (profit 4)          ; returns 889.2
 (profit 5)          ; returns 415.2
 
-
 (profit 2.8)        ; returns 1062
 (profit 2.9)        ; returns 1064.1 This is the best ticket price to a dime: 2.9.
 (profit 3.0)        ; returns 1063.2
