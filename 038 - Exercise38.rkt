@@ -9,7 +9,7 @@
 ;; given: "hello world", expected: "hello worl"
 ;; given: "b", expected: ""
 
-;; (define (string-remoive-last str)
+;; (define (string-remove-last str)
 ;;   (... str ...))
 
 (define (string-remove-last str)
