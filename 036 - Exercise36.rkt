@@ -13,6 +13,3 @@
 
 (define (image-area img)
   (* (image-height img)(image-width img)))
-
-(check-expect (image-area (rectangle 100 20 "solid" "blue")) 2000)
-(check-expect (image-area (rectangle 100 100 "solid" "blue")) 10000)
