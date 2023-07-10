@@ -1,16 +1,16 @@
-; A WorldState is a Number.
-; Interpretation: the number of pixels between the left border of the scene and the car.
+;; A WorldState is a Number.
+;; interpretation: the number of pixels between the left border of the scene and the car
 
-; WorldState -> WorldState (cw)
-; Moves the car by 3 pixels for every clock tick.
+;; WorldState -> WorldState (cw)
+;; moves the car by 3 pixels for every clock tick
 ; (define (tock cw) 0)
 
-; given: 20, expected 23
-; given: 100, expected 103
-; given: 200, expected 203
+;; given: 20, expected 23
+;; given: 100, expected 103
+;; given: 200, expected 203
 
-; (define (tock cw)
-;   (... cw ...))
+;; (define (tock cw)
+;;   (... cw ...))
 
 (define (tock cw)
   (+ cw 3))
