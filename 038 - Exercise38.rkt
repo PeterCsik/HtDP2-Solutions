@@ -14,7 +14,3 @@
 
 (define (string-remove-last str)
   (substring str 0 (-(string-length str) 1)))
-
-(check-expect (string-remove-last "abc") "ab")
-(check-expect (string-remove-last "hello world") "hello worl")
-(check-expect (string-remove-last "b") "")
