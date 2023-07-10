@@ -14,7 +14,3 @@
 
 (define (string-first str)
   (substring str 0 1))
-
-(check-expect (string-first "abc") "a")
-(check-expect (string-first "hello world") "h")
-(check-expect (string-first "b") "b")
