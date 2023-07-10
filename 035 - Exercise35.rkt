@@ -2,7 +2,7 @@
 ;; interpretation: a non-empty string is a sequence of characters with at least one character
 
 ;; (Non-empty) String -> String
-;; Extracts the last character from a non-empty string.
+;; extracts the last character from a non-empty string
 ;; (define (string-last str) "a")
 
 ;; given: "abc", expected: "c"
