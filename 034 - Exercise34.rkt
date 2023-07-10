@@ -1,4 +1,4 @@
-;; A non-empty string is represented by the String data type
+;; A non-empty string is represented by the String data type.
 ;; interpretation a non-empty string is a sequence of characters with at least one character
 
 ;; (Non-empty) String -> String
