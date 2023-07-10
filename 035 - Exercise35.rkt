@@ -13,4 +13,8 @@
 ;;   (... str ...))
 
 (define (string-last str)
-  (string-ith str (-(string-length str)1)))
+  (string-ith str (-(string-length str) 1)))
+
+(string-last "abc")            ; returns "c", the expected value
+(string-last "hello world")    ; returns "d", the expected value
+(string-last "b")              ; returns "b", the expected value
