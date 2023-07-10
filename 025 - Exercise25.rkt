@@ -5,7 +5,6 @@
    
 (image-classify ...)                                           ; image of a rocket was used
                                                                
-
 ;; (cond ((>= (image-height ...) (image-width ...)) "tall")
 ;;       ((= (image-height ...) (image-width ...))  "square")
 ;;       ((<= (image-height ...) (image-width ...)) "wide"))
